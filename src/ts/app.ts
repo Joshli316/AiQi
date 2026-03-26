@@ -220,7 +220,7 @@ function renderLessonList(): string {
         : '';
 
     return `
-      <div class="lesson-card ${stateClass}" onclick="window.__navigate('lesson', {lessonId: ${num}})">
+      <div class="lesson-card ${stateClass}" role="button" tabindex="0" onclick="window.__navigate('lesson', {lessonId: ${num}})" onkeydown="if(event.key==='Enter')this.click()">
         <div class="lesson-card__number">${completed ? checkSvg : num}</div>
         <div class="lesson-card__info">
           <div class="lesson-card__title">${title}</div>
@@ -270,7 +270,6 @@ declare global {
     __navigate: typeof navigate;
     __toggleLang: typeof toggleLang;
     __getProgress: () => any[];
-    __isPurchased: () => boolean;
     __triggerConfetti: typeof triggerConfetti;
     __showCelebration: typeof showCelebration;
   }

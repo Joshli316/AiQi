@@ -10,7 +10,6 @@ interface ProgressEntry {
 
 const STORAGE_KEY = 'aiqi-progress';
 const STREAK_KEY = 'aiqi-streak-dates';
-const PURCHASED_KEY = 'aiqi-purchased';
 const MS_PER_DAY = 86400000;
 
 function getLocalProgress(): ProgressEntry[] {
@@ -114,13 +113,8 @@ export function getNextLesson(): number {
   return 14; // All done
 }
 
-export function isPurchased(): boolean {
-  return localStorage.getItem(PURCHASED_KEY) === 'true';
-}
-
 // Expose globally for app.ts
 window.__getProgress = getProgress;
-window.__isPurchased = isPurchased;
 
 export function renderDashboard(): string {
   const lang = getLang();
@@ -178,12 +172,10 @@ export function renderDashboard(): string {
             const num = i + 1;
             const isComplete = completed.has(num);
             const isCurrent = num === nextLesson;
-            const isLocked = num > 5 && !isPurchased() && !isComplete;
             let cls = 'lesson-dot';
             if (isComplete) cls += ' lesson-dot--complete';
             else if (isCurrent) cls += ' lesson-dot--current';
-            else if (isLocked) cls += ' lesson-dot--locked';
-            return `<div class="${cls}" onclick="window.__navigate('lesson', {lessonId: ${num}})">${num}</div>`;
+            return `<div class="${cls}" role="button" tabindex="0" onclick="window.__navigate('lesson', {lessonId: ${num}})" onkeydown="if(event.key==='Enter')this.click()">${num}</div>`;
           }).join('')}
         </div>
 
