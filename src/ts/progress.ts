@@ -1,5 +1,5 @@
 import { t, getLang } from './i18n';
-import { getUser, getToken } from './auth';
+import { getToken } from './auth';
 import { getLessonTitle } from './app';
 
 interface ProgressEntry {

@@ -5,7 +5,7 @@ import { renderPaywall } from './paywall';
 import { initAuth, renderAuthButton } from './auth';
 import { triggerConfetti, showCelebration } from './celebrations';
 
-type Route = 'home' | 'lessons' | 'lesson' | 'dashboard' | 'settings';
+type Route = 'home' | 'lessons' | 'lesson' | 'dashboard';
 
 interface RouteParams {
   lessonId?: number;
@@ -89,7 +89,6 @@ function parseHash(): { route: Route; params: RouteParams } {
     '': 'home',
     'lessons': 'lessons',
     'dashboard': 'dashboard',
-    'settings': 'settings',
   };
 
   return { route: routeMap[parts[0] || ''] || 'home', params: {} };
