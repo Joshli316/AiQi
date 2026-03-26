@@ -80,7 +80,7 @@ async function handleCredentialResponse(response: any): Promise<void> {
     // Re-render
     window.dispatchEvent(new CustomEvent('authchange'));
   } catch {
-    console.error('Failed to process sign-in');
+    // sign-in processing failed silently
   }
 }
 
