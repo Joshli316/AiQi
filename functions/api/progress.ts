@@ -1,12 +1,7 @@
+import { verifyGoogleToken, jsonResponse } from './_shared';
+
 interface Env {
   DB: D1Database;
-}
-
-function jsonResponse(data: unknown, status = 200): Response {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: { 'Content-Type': 'application/json' },
-  });
 }
 
 async function getAuthenticatedUser(context: EventContext<Env, any, any>): Promise<{ id: string } | null> {
@@ -14,7 +9,11 @@ async function getAuthenticatedUser(context: EventContext<Env, any, any>): Promi
   if (!auth?.startsWith('Bearer ')) return null;
 
   const token = auth.slice(7);
-  const payload = JSON.parse(atob(token.split('.')[1]));
+
+  // Verify token signature with Google before trusting claims
+  const payload = await verifyGoogleToken(token);
+  if (!payload) return null;
+
   return context.env.DB.prepare(
     'SELECT id FROM users WHERE google_id = ?'
   ).bind(payload.sub).first<{ id: string }>();

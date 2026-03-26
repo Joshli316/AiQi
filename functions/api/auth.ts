@@ -1,3 +1,5 @@
+import { verifyGoogleToken, jsonResponse } from './_shared';
+
 interface Env {
   DB: D1Database;
 }
@@ -7,30 +9,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const { token } = await context.request.json() as { token: string };
 
     if (!token) {
-      return new Response(JSON.stringify({ error: 'Missing token' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return jsonResponse({ error: 'Missing token' }, 400);
     }
 
-    // Decode Google JWT (basic decode — in production, verify signature)
-    const parts = token.split('.');
-    if (parts.length !== 3) {
-      return new Response(JSON.stringify({ error: 'Invalid token format' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
+    // Verify token with Google's tokeninfo endpoint
+    const payload = await verifyGoogleToken(token);
+    if (!payload) {
+      return jsonResponse({ error: 'Invalid or expired token' }, 401);
     }
 
-    const payload = JSON.parse(atob(parts[1]));
     const { sub: googleId, email, name } = payload;
-
-    if (!googleId || !email) {
-      return new Response(JSON.stringify({ error: 'Invalid token payload' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
 
     // Upsert user
     const existing = await context.env.DB.prepare(
@@ -49,13 +37,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       userId = id;
     }
 
-    return new Response(JSON.stringify({ userId }), {
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    return new Response(JSON.stringify({ error: 'Internal error' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return jsonResponse({ userId });
+  } catch {
+    return jsonResponse({ error: 'Internal error' }, 500);
   }
 };
