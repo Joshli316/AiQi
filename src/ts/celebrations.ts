@@ -1,7 +1,7 @@
 import { t, getLang } from './i18n';
 import { getCompletedCount } from './progress';
 
-const CONFETTI_COLORS = ['#6C5CE7', '#A29BFE', '#00B894', '#55EFC4', '#FDCB6E', '#FF6B6B', '#74B9FF'];
+const CONFETTI_COLORS = ['#6366F1', '#818CF8', '#22C55E', '#4ADE80', '#FFD300', '#14B8A6', '#F59E0B'];
 
 export function triggerConfetti(): void {
   const container = document.getElementById('confetti-container');

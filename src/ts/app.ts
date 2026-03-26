@@ -132,7 +132,7 @@ function renderBottomNav(): string {
         <button class="nav-item ${currentRoute === item.route ? 'nav-item--active' : ''}"
                 ${currentRoute === item.route ? 'aria-current="page"' : ''}
                 onclick="window.__navigate('${item.route}')">
-          <span class="nav-item__icon">${icons[item.icon]}</span>
+          <span class="nav-item__icon" aria-hidden="true">${icons[item.icon]}</span>
           <span>${t(item.labelKey)}</span>
         </button>
       `).join('')}
@@ -183,7 +183,7 @@ function renderFeatureCard(key: string): string {
   const icon = featureIcons[key] || '';
   return `
     <div class="feature-card feature-card--${key}">
-      <div class="feature-card__icon">${icon}</div>
+      <div class="feature-card__icon" aria-hidden="true">${icon}</div>
       <div>
         <div class="feature-card__title">${t(`feature.${key}`)}</div>
         <div class="feature-card__desc">${t(`feature.${key}.desc`)}</div>
