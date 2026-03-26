@@ -107,7 +107,6 @@ function renderHeader(): string {
           <span class="lang-toggle__option ${getLang() === 'en' ? 'lang-toggle__option--active' : ''}">EN</span>
           <span class="lang-toggle__option ${getLang() === 'zh' ? 'lang-toggle__option--active' : ''}">中文</span>
         </button>
-        ${renderAuthButton()}
       </div>
     </header>
   `;
