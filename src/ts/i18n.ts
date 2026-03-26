@@ -23,7 +23,7 @@ const translations: Record<string, Record<Lang, string>> = {
   'hero.badge': { en: 'Free to Start', zh: '免费开始' },
   'hero.title.1': { en: 'From Zero to Shipping', zh: '从零到上线' },
   'hero.title.2': { en: 'In Your Language', zh: '用你的语言' },
-  'hero.subtitle': { en: '14 lessons. 2 weeks. Your first live app. No coding experience needed.', zh: '14节课。2周时间。你的第一个在线应用。零基础也能学会。' },
+  'hero.subtitle': { en: '14 lessons. ~2 hours total. Your first live app in 2 weeks. No coding experience needed.', zh: '14节课。总共约2小时。2周内做出你的第一个在线应用。零基础也能学会。' },
   'hero.proof': { en: 'Built for Chinese international graduates entering the job market', zh: '专为求职中的中国留学生打造' },
   'feature.terminal': { en: 'Safe Practice Terminal', zh: '安全练习终端' },
   'feature.terminal.desc': { en: 'Practice commands without fear. Nothing can break.', zh: '放心练习命令。不会出任何问题。' },
