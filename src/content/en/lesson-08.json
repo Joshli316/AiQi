@@ -1,0 +1,61 @@
+{
+  "id": 8,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Welcome to Week 2!", "zh": "欢迎来到第二周！" },
+      "body": { "en": "Last week you shipped a webpage. This week, you'll build a **real app from scratch** — something you can put on your portfolio and show employers.\n\nBut first: what should you build? Let's think like a builder.", "zh": "上周你上线了一个网页。这周你将**从零构建一个真实应用**——可以放在作品集里给雇主看的。\n\n但首先：你应该做什么？让我们像建造者一样思考。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "The Perfect Beginner Project", "zh": "完美的入门项目" },
+      "body": { "en": "A great first project should be:\n\n- **Useful to you** — something you'd actually use\n- **Simple enough** — can be built in a few hours\n- **Impressive enough** — shows you can build real things\n- **Completable** — has a clear \"done\" state\n\nWe recommend a **task tracker app** — it has buttons, input fields, lists, and data management. It looks impressive but is totally doable.", "zh": "一个好的第一个项目应该是：\n\n- **对你有用** —— 你真的会用的东西\n- **足够简单** —— 几小时内能做完\n- **足够酷** —— 展示你能做真东西\n- **可以完成** —— 有明确的「完成」状态\n\n我们推荐做一个**任务管理应用**——有按钮、输入框、列表和数据管理。看起来很厉害但完全可以做到。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Scoping: Keep It Small", "zh": "范围控制：保持小而美" },
+      "body": { "en": "The #1 mistake beginners make: **trying to build too much**. Start with the simplest version that works.\n\nFor a task tracker, the MVP (minimum viable product) is:\n- Add a task\n- Mark a task complete\n- Delete a task\n\nThat's it. No categories, no due dates, no sharing. Those can come later. **Ship simple, improve later.**", "zh": "新手最常犯的错误：**想做太多**。从最简单的能用版本开始。\n\n任务管理器的MVP（最小可用产品）是：\n- 添加任务\n- 标记任务完成\n- 删除任务\n\n就这些。没有分类、没有截止日期、没有分享。那些以后再说。**先简单上线，再慢慢改进。**" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Other Great Project Ideas", "zh": "其他好的项目想法" },
+      "body": { "en": "If a task tracker doesn't excite you, here are other beginner-friendly ideas:\n\n- **Personal portfolio** — showcase your work and skills\n- **Countdown timer** — for events, deadlines, or goals\n- **Recipe organizer** — save and display your favorite recipes\n- **Daily journal** — write and save daily notes\n- **Quiz app** — create quizzes on any topic\n\nPick one that makes you think \"I'd actually use this!\"", "zh": "如果任务管理器不够吸引你，这些也是不错的入门项目：\n\n- **个人作品集** —— 展示你的工作和技能\n- **倒计时器** —— 用于活动、截止日期或目标\n- **菜谱整理** —— 保存和展示你喜欢的食谱\n- **每日日记** —— 记录每天的笔记\n- **测验应用** —— 创建任何主题的测验\n\n选一个让你觉得「我真的会用这个！」的。" }
+    },
+    {
+      "type": "quiz",
+      "title": { "en": "Quick Check: Project Planning", "zh": "快速检查：项目规划" },
+      "body": { "en": "Let's make sure you're thinking like a builder!", "zh": "确认你已经像建造者一样思考了！" },
+      "quiz": {
+        "questions": [
+          {
+            "question": { "en": "What's the biggest beginner mistake when starting a project?", "zh": "新手开始项目时最大的错误是什么？" },
+            "options": [
+              { "en": "Starting too small", "zh": "开始太小" },
+              { "en": "Trying to build too much at once", "zh": "试图一次做太多" },
+              { "en": "Using AI tools", "zh": "使用AI工具" },
+              { "en": "Picking a project they like", "zh": "选了自己喜欢的项目" }
+            ],
+            "correctIndex": 1,
+            "explanation": { "en": "Start simple! Build the MVP first, then add features later.", "zh": "从简单开始！先做MVP，然后再加功能。" }
+          },
+          {
+            "question": { "en": "What's an MVP?", "zh": "什么是MVP？" },
+            "options": [
+              { "en": "The most valuable programmer", "zh": "最有价值的程序员" },
+              { "en": "A very expensive product", "zh": "非常贵的产品" },
+              { "en": "The simplest version that works", "zh": "最简单的能用版本" },
+              { "en": "A perfect final product", "zh": "完美的最终产品" }
+            ],
+            "correctIndex": 2,
+            "explanation": { "en": "MVP = Minimum Viable Product. The simplest version that actually works!", "zh": "MVP = 最小可用产品。能用的最简单版本！" }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Your Project, Your Choice", "zh": "你的项目，你的选择" },
+      "body": { "en": "For the rest of this course, we'll walk through building a **task tracker app** as our example. But everything we teach applies to any project.\n\nReady to start planning? Let's go!", "zh": "在接下来的课程中，我们将以**任务管理应用**为例。但教的一切适用于任何项目。\n\n准备好开始规划了吗？走起！" }
+    }
+  ]
+}

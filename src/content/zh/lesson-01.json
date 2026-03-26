@@ -1,0 +1,77 @@
+{
+  "id": 1,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Welcome! Let's Talk About Your Superpower", "zh": "欢迎！让我们聊聊你的超能力" },
+      "body": { "en": "Imagine you could build websites, tools, and apps — without spending years learning to code. That's not a fantasy anymore. **AI-assisted coding** means you describe what you want in plain English (or Chinese!), and an AI builds it for you.\n\nThis course will teach you how to use **Claude Code**, one of the most powerful AI coding tools available today. By the end, you'll have built and published a real website. Yes, you — even if you've never written a single line of code.", "zh": "想象一下，你可以构建网站、工具和应用程序——而不需要花费数年时间学习编程。这不再是幻想。**AI辅助编程**意味着你用简单的英语（或中文！）描述你想要的东西，AI就会帮你构建。\n\n本课程将教你如何使用**Claude Code**，这是目前最强大的AI编程工具之一。到课程结束时，你将构建并发布一个真正的网站。是的，就是你——即使你从未写过一行代码。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Exactly Is AI-Assisted Coding?", "zh": "AI辅助编程到底是什么？" },
+      "body": { "en": "Think of it like having a **really talented friend** who knows how to code. You tell them: \"Hey, can you make me a website that shows my resume?\" And they just... do it. They write all the code, organize the files, and show you the result.\n\n**Claude Code** is that friend. It lives in your computer's terminal (we'll learn what that is soon), and you talk to it by typing what you want. It writes code, creates files, and even fixes its own mistakes. Your job is to **describe what you want and guide the direction**.", "zh": "把它想象成有一个**非常有才华的朋友**，他知道如何编程。你告诉他们：「嘿，你能帮我做一个展示简历的网站吗？」然后他们就……做了。他们写好所有代码，整理文件，并向你展示结果。\n\n**Claude Code**就是那个朋友。它存在于你的计算机终端中（我们很快会学到那是什么），你通过输入你想要的内容来与它交流。它编写代码、创建文件，甚至修复自己的错误。你的工作是**描述你想要的东西并引导方向**。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Why Should You Care? (Hint: Employers Do)", "zh": "为什么你应该关心？（提示：雇主很在意）" },
+      "body": { "en": "Here's a reality check: **the job market is changing fast**. Companies everywhere — from startups in San Francisco to consulting firms in New York — want people who can work with AI tools. You don't need to be a software engineer. But being able to say \"I can build a prototype with AI\" in an interview? That's a game-changer.\n\nOver 70% of companies now use or plan to use AI coding tools. Learning this skill puts you **ahead of most candidates**, especially in non-technical roles like marketing, operations, and project management.", "zh": "这是一个现实：**就业市场正在快速变化**。从旧金山的初创公司到纽约的咨询公司，到处都在寻找能够使用AI工具的人。你不需要成为软件工程师。但在面试中能说「我可以用AI构建原型」？这是一个改变游戏规则的能力。\n\n超过70%的公司现在正在使用或计划使用AI编程工具。学习这项技能让你**领先于大多数候选人**，尤其是在营销、运营和项目管理等非技术岗位上。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Real People, Real Projects, Zero Coding Background", "zh": "真实的人，真实的项目，零编程背景" },
+      "body": { "en": "This isn't just theory. **People with no coding experience are already shipping real projects** with AI coding tools:\n\n- A marketing graduate built a client portfolio website in one afternoon\n- A teacher created an interactive quiz app for her students\n- A small business owner launched a booking page without hiring a developer\n- An international student built a personal website that helped them land interviews\n\nNone of these people took a computer science class. They learned to **communicate clearly with AI** — which is exactly what we'll teach you.", "zh": "这不仅仅是理论。**没有编程经验的人已经在用AI编程工具发布真正的项目**了：\n\n- 一位市场营销毕业生在一个下午内建好了客户作品集网站\n- 一位老师为学生创建了互动测验应用\n- 一位小企业主在没有雇开发人员的情况下推出了预约页面\n- 一位留学生建了一个帮助他们获得面试机会的个人网站\n\n这些人都没有上过计算机科学课。他们学会了**与AI清晰地沟通**——这正是我们将要教你的。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What You'll Build in This Course", "zh": "你将在本课程中构建什么" },
+      "body": { "en": "By the end of these 7 lessons, you will have:\n\n1. **Opened the terminal** on your computer (it's less scary than it sounds!)\n2. **Installed Claude Code** — your AI coding partner\n3. **Built a personal webpage** by talking to Claude\n4. **Understood what the code means** — at a high level, not memorizing syntax\n5. **Edited your page** just by describing changes in words\n6. **Published your site** to a real URL that anyone can visit\n\nThat's a **live website on the internet**, built by you, in about 2 hours total. Ready?", "zh": "在这7节课结束时，你将：\n\n1. **打开计算机上的终端**（它没有听起来那么可怕！）\n2. **安装Claude Code**——你的AI编程伙伴\n3. **通过与Claude对话构建一个个人网页**\n4. **理解代码的含义**——从高层次理解，不需要记住语法\n5. **仅通过文字描述来编辑你的页面**\n6. **将你的网站发布**到任何人都可以访问的真实URL\n\n那就是一个**在互联网上的真实网站**，由你构建，总共大约2小时。准备好了吗？" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Your Mental Model: Director, Not Actor", "zh": "你的心智模型：导演，而不是演员" },
+      "body": { "en": "Here's the most important mindset shift: **you are the director, not the actor**. In a movie, the director doesn't memorize every line or operate every camera. They have a vision, communicate it clearly, and guide the team.\n\nWith AI coding, you don't need to know programming languages. You need to know **what you want to build** and **how to describe it clearly**. Claude handles the technical details. If something doesn't look right, you tell Claude to fix it — just like a director giving notes.\n\nThis is a genuine professional skill. Companies call it \"AI fluency\" and it's becoming as important as knowing Excel.", "zh": "这是最重要的思维转变：**你是导演，而不是演员**。在电影中，导演不需要记住每一句台词或操作每一台摄像机。他们有愿景，清晰地传达，并引导团队。\n\n在AI编程中，你不需要了解编程语言。你需要知道**你想构建什么**以及**如何清楚地描述它**。Claude处理技术细节。如果某些东西看起来不对，你告诉Claude修复它——就像导演给出反馈一样。\n\n这是一项真正的专业技能。公司称之为「AI素养」，它正变得像了解Excel一样重要。" }
+    },
+    {
+      "type": "quiz",
+      "title": { "en": "Quick Check: Are You Ready?", "zh": "快速检查：你准备好了吗？" },
+      "body": { "en": "Let's make sure the key ideas clicked. Don't worry — this isn't a test. **There's no penalty for wrong answers** — they're actually great for learning!", "zh": "让我们确保关键概念已经理解了。别担心——这不是考试。**答错没有惩罚**——错误实际上对学习很有帮助！" },
+      "quiz": {
+        "questions": [
+          {
+            "question": { "en": "What is AI-assisted coding?", "zh": "什么是AI辅助编程？" },
+            "options": [
+              { "en": "Memorizing programming languages", "zh": "记忆编程语言" },
+              { "en": "Describing what you want and letting AI write the code", "zh": "描述你想要的东西，让AI编写代码" },
+              { "en": "Copying code from the internet", "zh": "从互联网上复制代码" },
+              { "en": "Watching YouTube tutorials about coding", "zh": "观看关于编程的YouTube教程" }
+            ],
+            "correctIndex": 1,
+            "explanation": { "en": "That's right! AI-assisted coding means you describe your vision in plain language, and the AI writes the code. You're the director!", "zh": "没错！AI辅助编程意味着你用简单的语言描述你的愿景，AI来编写代码。你是导演！" }
+          },
+          {
+            "question": { "en": "Why is AI coding a valuable career skill?", "zh": "为什么AI编程是一项有价值的职业技能？" },
+            "options": [
+              { "en": "It replaces the need for all other skills", "zh": "它取代了所有其他技能的需要" },
+              { "en": "Only software engineers use it", "zh": "只有软件工程师才使用它" },
+              { "en": "Employers value people who can build things with AI tools", "zh": "雇主重视能够使用AI工具构建东西的人" },
+              { "en": "It guarantees a job in tech", "zh": "它保证了一份科技工作" }
+            ],
+            "correctIndex": 2,
+            "explanation": { "en": "Exactly! Companies across all industries want people who can use AI tools to build and prototype. It makes you stand out in any role.", "zh": "完全正确！各行各业的公司都想要能够使用AI工具来构建和制作原型的人。这让你在任何角色中脱颖而出。" }
+          },
+          {
+            "question": { "en": "What's the best way to think about your role when using Claude Code?", "zh": "使用Claude Code时，思考你角色的最佳方式是什么？" },
+            "options": [
+              { "en": "You need to learn to code first", "zh": "你需要先学会编程" },
+              { "en": "You're a director — you guide the vision, Claude handles the code", "zh": "你是导演——你引导愿景，Claude处理代码" },
+              { "en": "You should let AI make all decisions", "zh": "你应该让AI做所有决定" },
+              { "en": "You type random commands and hope for the best", "zh": "你输入随机命令并期待最好的结果" }
+            ],
+            "correctIndex": 1,
+            "explanation": { "en": "You got it! You're the director. You don't need to know how to write code — you need to know what you want and how to communicate it clearly.", "zh": "你答对了！你是导演。你不需要知道如何写代码——你需要知道你想要什么以及如何清楚地表达它。" }
+          }
+        ]
+      }
+    }
+  ]
+}

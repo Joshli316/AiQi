@@ -1,0 +1,46 @@
+{
+  "id": 11,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Making It Come Alive", "zh": "让它活起来" },
+      "body": { "en": "Your app has a structure, but nothing happens when you click buttons. That's about to change! In this lesson, you'll tell Claude to add **interactivity** — real behavior that responds to what users do.", "zh": "你的应用有了结构，但点击按钮什么都不会发生。这即将改变！这节课你会让Claude添加**交互性**——响应用户操作的真实行为。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Is Interactivity?", "zh": "什么是交互性？" },
+      "body": { "en": "**Interactivity** means the app responds to user actions:\n\n- Typing in a field and pressing Enter adds a task\n- Clicking a checkbox marks a task done\n- Clicking a delete button removes a task\n- Reloading the page keeps your tasks saved\n\nThis is what separates a static page from a real app.", "zh": "**交互性**意味着应用响应用户操作：\n\n- 在输入框输入并按回车添加任务\n- 点击复选框标记任务完成\n- 点击删除按钮移除任务\n- 刷新页面任务不丢失\n\n这就是静态页面和真正应用的区别。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Add Button Functionality", "zh": "试试：添加按钮功能" },
+      "body": { "en": "Ask Claude to make the add button actually create new tasks.", "zh": "让Claude让添加按钮真正创建新任务。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"add a button that creates new tasks\"", "output": "I'll add the task creation functionality!\n\n✓ Added event listener to the Add button\n✓ Tasks appear in the list when added\n✓ Input field clears after adding\n✓ Tasks save to localStorage\n✓ Tasks load on page refresh\n\nTry it out! Type a task and click Add.", "successMsg": "Your app has real interactivity now!" }
+        ],
+        "hints": { "en": "Type: claude \"add a button that creates new tasks\"", "zh": "输入：claude \"add a button that creates new tasks\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Claude Just Did", "zh": "Claude刚做了什么" },
+      "body": { "en": "Claude added JavaScript that:\n\n1. **Listens** for button clicks and Enter key presses\n2. **Creates** a new task element when triggered\n3. **Saves** tasks to LocalStorage (your browser's built-in database)\n4. **Loads** saved tasks when the page opens\n\nAll from one sentence! This is the power of clear communication with AI.", "zh": "Claude添加了JavaScript：\n\n1. **监听**按钮点击和回车键\n2. **创建**新任务元素\n3. **保存**任务到LocalStorage（浏览器内置数据库）\n4. **加载**打开页面时的保存任务\n\n一句话就做到了！这就是与AI清晰沟通的力量。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "LocalStorage: Your Simple Database", "zh": "LocalStorage：你的简单数据库" },
+      "body": { "en": "**LocalStorage** is like a tiny notebook inside your browser. It remembers things even when you close the tab. For a simple app like this, it's perfect.\n\nYou don't need to set up a database or server — LocalStorage just works. Claude knows to use it for simple data persistence.", "zh": "**LocalStorage**就像浏览器里的小笔记本。关闭标签页也不会忘记。对于这样的简单应用，它非常完美。\n\n不需要设置数据库或服务器——LocalStorage直接就能用。Claude知道用它来做简单的数据存储。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Iterating: Make It Better", "zh": "迭代：让它更好" },
+      "body": { "en": "Your app works, but you might want more features. Try telling Claude:\n\n- \"Add a checkbox to mark tasks complete\"\n- \"Add a delete button for each task\"\n- \"Show completed tasks with a strikethrough\"\n\nEach request adds a layer of functionality. This is how real apps are built — **one feature at a time**.", "zh": "你的应用能用了，但你可能想要更多功能。试试告诉Claude：\n\n- 「给任务添加完成复选框」\n- 「给每个任务添加删除按钮」\n- 「已完成的任务显示删除线」\n\n每个请求添加一层功能。真正的应用就是这样构建的——**每次一个功能**。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Your App is Interactive!", "zh": "你的应用可交互了！" },
+      "body": { "en": "You now have a working task tracker that saves data. In the next lesson, we'll make it **look professional** with CSS styling. Function first, beauty second — that's the builder's way!", "zh": "你现在有了一个能保存数据的任务管理器。下一课我们用CSS让它**看起来专业**。先功能后美观——这是建造者的方式！" }
+    }
+  ]
+}

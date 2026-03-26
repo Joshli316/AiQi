@@ -1,0 +1,68 @@
+{
+  "id": 2,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "What Is a Terminal?", "zh": "什么是终端？" },
+      "body": { "en": "The **terminal** is just a text-based way to talk to your computer. Instead of clicking icons, you type commands. Think of it like **texting your computer** — you type a message, it replies.\n\nIt might look intimidating with its dark background and blinking cursor, but it's actually simpler than most apps. Let's demystify it!", "zh": "**终端**只是一种用文字和电脑交流的方式。不用点击图标，而是输入命令。把它想象成**给电脑发短信**——你打字，它回复。\n\n黑色背景和闪烁的光标可能看起来吓人，但它其实比大多数应用都简单。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Opening Your Terminal", "zh": "打开你的终端" },
+      "body": { "en": "On **Mac**: Press Cmd+Space, type \"Terminal\", hit Enter.\nOn **Windows**: Press Win+R, type \"cmd\", hit Enter. (Or search for \"Terminal\")\n\nThat's it! You should see a window with a blinking cursor. This is where the magic happens. Don't worry — **nothing you type here can break your computer**.", "zh": "**Mac**上：按 Cmd+Space，输入「Terminal」，按回车。\n**Windows**上：按 Win+R，输入「cmd」，按回车。\n\n就这样！你会看到一个带闪烁光标的窗口。别担心——**你在这里输入的任何东西都不会弄坏电脑**。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Your First Command: pwd", "zh": "你的第一个命令：pwd" },
+      "body": { "en": "**pwd** stands for \"print working directory\". It tells you **where you are** on your computer — like asking \"what folder am I in?\"\n\nThis is the simplest command there is. Try it in the terminal below!", "zh": "**pwd** 代表「print working directory」（打印工作目录）。它告诉你你**在电脑的哪个位置**——就像问「我在哪个文件夹里？」\n\n这是最简单的命令。在下面的终端试试！" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Where Am I?", "zh": "试试：我在哪？" },
+      "body": { "en": "Type **pwd** and press Enter to see your current location.", "zh": "输入 **pwd** 并按回车查看你的当前位置。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "pwd", "output": "/Users/student/Desktop", "successMsg": "You found your location! You're on the Desktop." }
+        ],
+        "hints": { "en": "Type: pwd", "zh": "输入：pwd" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Listing Files: ls", "zh": "列出文件：ls" },
+      "body": { "en": "**ls** stands for \"list\". It shows you **what's in the current folder** — like opening a folder and seeing its contents.\n\nInstead of double-clicking a folder icon, you just type two letters. Faster, right?", "zh": "**ls** 代表「list」（列出）。它显示**当前文件夹里有什么**——就像打开文件夹看里面的内容。\n\n不用双击文件夹图标，只需输入两个字母。更快，对吧？" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: What's Here?", "zh": "试试：这里有什么？" },
+      "body": { "en": "Type **ls** to see what files and folders are here.", "zh": "输入 **ls** 看看这里有哪些文件和文件夹。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "ls", "output": "Documents  Downloads  Music  Pictures  Projects  resume.pdf", "successMsg": "You can see all the files! Just like looking inside a folder." }
+        ],
+        "hints": { "en": "Type: ls", "zh": "输入：ls" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Moving Around: cd", "zh": "移动位置：cd" },
+      "body": { "en": "**cd** stands for \"change directory\". It lets you **move into a different folder** — like double-clicking a folder to open it.\n\nYou type **cd** followed by the folder name. For example: **cd Documents** moves you into the Documents folder.", "zh": "**cd** 代表「change directory」（更改目录）。它让你**进入不同的文件夹**——就像双击文件夹打开它。\n\n输入 **cd** 加上文件夹名称。例如：**cd Documents** 进入Documents文件夹。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Go to Documents", "zh": "试试：进入Documents" },
+      "body": { "en": "Type **cd Documents** to move into the Documents folder.", "zh": "输入 **cd Documents** 进入Documents文件夹。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "cd Documents", "output": "student@computer:~/Documents$", "successMsg": "You navigated to Documents! You're a natural." }
+        ],
+        "hints": { "en": "Type: cd Documents", "zh": "输入：cd Documents" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You Just Learned 3 Commands!", "zh": "你刚学会了3个命令！" },
+      "body": { "en": "Look at that — you already know three terminal commands:\n\n- **pwd** → Where am I?\n- **ls** → What's here?\n- **cd** → Go to a folder\n\nThat's honestly **80% of what you need** to get started with Claude Code. The terminal isn't scary — it's just a different way to do things you already do every day on your computer.", "zh": "看——你已经学会了三个终端命令：\n\n- **pwd** → 我在哪？\n- **ls** → 这里有什么？\n- **cd** → 进入文件夹\n\n这真的是你开始使用Claude Code所需的**80%**。终端不可怕——它只是用另一种方式做你每天在电脑上做的事。" }
+    }
+  ]
+}

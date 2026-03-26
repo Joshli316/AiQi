@@ -1,0 +1,15 @@
+{
+  "name": "aiqi",
+  "version": "1.0.0",
+  "description": "Bilingual tutorial app teaching Claude Code to Chinese international graduates",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npm run build && npx wrangler pages dev dist/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0",
+    "wrangler": "^3.0.0"
+  }
+}

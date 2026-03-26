@@ -1,0 +1,46 @@
+{
+  "id": 6,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Editing Without Coding", "zh": "无需编码的编辑" },
+      "body": { "en": "You've built a webpage. Now let's **change it** — without writing any code. The magic of Claude Code is that you can describe changes in plain words and Claude makes them happen.\n\nThis is where you start thinking like a **creative director**: \"I want the background blue\" or \"Add a section about my education\".", "zh": "你已经建了一个网页。现在让我们**修改它**——不用写代码。Claude Code的魔力在于你可以用文字描述修改，Claude就会实现。\n\n这就是你开始像**创意总监**一样思考的时候：「我想要蓝色背景」或「添加一个教育背景部分」。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "The Art of Good Prompts", "zh": "好提示的艺术" },
+      "body": { "en": "A **prompt** is what you type to tell Claude what to do. Better prompts = better results. Here are the golden rules:\n\n1. **Be specific**: \"Change the heading to say 'John's Portfolio'\" instead of \"change the text\"\n2. **One change at a time**: Don't ask for 5 things at once\n3. **Describe what you see**: \"The text is too small\" or \"I want more space between sections\"\n4. **It's okay to iterate**: If it's not right, just ask again with more detail", "zh": "**提示**就是你输入的指令。更好的提示=更好的结果。黄金法则：\n\n1. **具体**：说「把标题改成'小明的作品集'」而不是「改文字」\n2. **一次一个修改**：不要一次要求5个变化\n3. **描述你看到的**：「文字太小了」或「段落之间间距大一些」\n4. **可以迭代**：不满意就再给更多细节" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Let's Make Some Changes!", "zh": "让我们来做些修改！" },
+      "body": { "en": "We'll practice making changes to your webpage. Each time, you'll tell Claude what to change in plain English. Watch how Claude understands your intent and makes it happen.\n\nLet's start with something visual — changing the background color.", "zh": "我们来练习修改你的网页。每次你用简单的语言告诉Claude要改什么。看看Claude如何理解你的意图并实现它。\n\n让我们从视觉效果开始——改变背景颜色。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Change the Background", "zh": "试试：改变背景" },
+      "body": { "en": "Tell Claude to change the background color to blue.", "zh": "告诉Claude把背景颜色改成蓝色。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"change the background color to blue\"", "output": "I'll update the background color for you.\n\n✓ Changed background-color to #3498db (a nice blue)\n✓ Updated text color to white for readability\n\nRefresh your browser to see the change!", "successMsg": "Look at that! One sentence and Claude changed the design." }
+        ],
+        "hints": { "en": "Type: claude \"change the background color to blue\"", "zh": "输入：claude \"change the background color to blue\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Prompt Patterns That Work", "zh": "有效的提示模式" },
+      "body": { "en": "Here are powerful prompt patterns you can use:\n\n- **Add**: \"Add a section about my hobbies\"\n- **Change**: \"Change the font to something more modern\"\n- **Remove**: \"Remove the photo placeholder\"\n- **Move**: \"Move the skills section above education\"\n- **Style**: \"Make the heading bigger and center it\"\n\nNotice how these are all **plain English instructions**. No code knowledge needed.", "zh": "这些是你可以使用的有效提示模式：\n\n- **添加**：「添加一个关于我爱好的部分」\n- **修改**：「把字体换成更现代的」\n- **删除**：「删掉照片占位符」\n- **移动**：「把技能部分移到教育上面」\n- **样式**：「把标题变大并居中」\n\n注意这些都是**普通的中英文指令**。不需要编码知识。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "When Things Don't Look Right", "zh": "当效果不对时" },
+      "body": { "en": "Sometimes Claude won't get it perfect on the first try. That's totally normal! Here's what to do:\n\n- **Be more specific**: Instead of \"make it look better\", say \"increase the font size to 18px and add more padding\"\n- **Reference what you see**: \"The text is overlapping the image\" tells Claude exactly what's wrong\n- **Try a different angle**: \"Make it look like a modern portfolio site\" gives Claude a mental model\n\nRemember: **iteration is not failure**. Professional designers go through dozens of revisions!", "zh": "有时Claude不会一次就做到完美。这完全正常！怎么办：\n\n- **更具体**：不说「让它好看点」，说「字号调到18px，增加内边距」\n- **描述你看到的**：「文字和图片重叠了」告诉Claude确切问题\n- **换个角度**：「让它看起来像现代作品集网站」给Claude一个参考\n\n记住：**迭代不是失败**。专业设计师要改几十版！" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You're an AI Director Now!", "zh": "你现在是AI导演了！" },
+      "body": { "en": "You just learned the most important skill in AI-assisted coding: **communicating your vision clearly**. You can now:\n\n- Ask Claude to build things\n- Read the code Claude creates\n- Tell Claude to make changes with plain words\n\nNext lesson: we'll put your page on the **actual internet** where anyone can see it. You're about to ship!", "zh": "你刚学会了AI辅助编程最重要的技能：**清晰传达你的愿景**。你现在可以：\n\n- 让Claude构建东西\n- 阅读Claude创建的代码\n- 用文字让Claude修改\n\n下一课：我们把你的页面放到**真正的互联网上**。你即将上线！" }
+    }
+  ]
+}

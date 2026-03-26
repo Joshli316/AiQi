@@ -1,0 +1,47 @@
+{
+  "id": 12,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Making It Look Professional", "zh": "让它看起来专业" },
+      "body": { "en": "Your app works great, but it probably looks plain. In this lesson, you'll tell Claude to add **modern CSS styling** — colors, fonts, spacing, and responsive design.\n\nGood design isn't just about looks. It builds **trust**. A polished app says \"this person cares about quality.\"", "zh": "你的应用运行良好，但看起来可能很朴素。这节课你会让Claude添加**现代CSS样式**——颜色、字体、间距和响应式设计。\n\n好的设计不仅是外观。它建立**信任**。精致的应用说明「这个人注重品质」。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Style Your App", "zh": "试试：美化你的应用" },
+      "body": { "en": "Ask Claude to make your app look professional.", "zh": "让Claude让你的应用看起来专业。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"make the app look professional with modern CSS\"", "output": "I'll give your app a modern, professional look!\n\n✓ Added clean color scheme (soft background, accent colors)\n✓ Styled input field and buttons\n✓ Added hover effects and transitions\n✓ Made layout responsive for mobile\n✓ Added subtle shadows and rounded corners\n\nRefresh to see the new design!", "successMsg": "Your app looks amazing now!" }
+        ],
+        "hints": { "en": "Type: claude \"make the app look professional with modern CSS\"", "zh": "输入：claude \"make the app look professional with modern CSS\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Makes Design Look Professional?", "zh": "什么让设计看起来专业？" },
+      "body": { "en": "A few simple CSS tricks make a huge difference:\n\n- **Consistent spacing** — even gaps between elements\n- **2-3 colors max** — don't use a rainbow\n- **Rounded corners** — softer, more modern look\n- **Subtle shadows** — depth without being heavy\n- **Good fonts** — clean sans-serif fonts like Inter\n- **Hover effects** — buttons that respond to mouse", "zh": "几个简单的CSS技巧能产生巨大差异：\n\n- **一致的间距** —— 元素间均匀的距离\n- **最多2-3种颜色** —— 不要用彩虹\n- **圆角** —— 更柔和、更现代\n- **微妙的阴影** —— 深度但不沉重\n- **好字体** —— 干净的无衬线字体如Inter\n- **悬停效果** —— 按钮响应鼠标" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Responsive Design: Mobile Matters", "zh": "响应式设计：移动端很重要" },
+      "body": { "en": "**Responsive design** means your app looks good on any screen size. Claude automatically adds this when you ask for professional styling.\n\nTry resizing your browser window — the app should rearrange itself to fit smaller screens. This is essential because most people browse on phones.", "zh": "**响应式设计**意味着你的应用在任何屏幕尺寸上都好看。当你要求专业样式时，Claude会自动添加。\n\n试试调整浏览器窗口大小——应用应该自动调整以适应小屏幕。这很重要，因为大多数人用手机浏览。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "CSS You Can Customize", "zh": "你可以自定义的CSS" },
+      "body": { "en": "Here's how to change the main color. Just ask Claude to update the color!", "zh": "这是改变主颜色的方法。让Claude更新颜色即可！" },
+      "codeBlock": { "code": "/* Change these values to customize your app's look */\n:root {\n  --primary-color: #6C5CE7;   /* Main accent color */\n  --background: #F8F9FA;       /* Page background */\n  --text-color: #2D3436;       /* Main text color */\n}", "label": "style.css" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Design Tips for Prompting Claude", "zh": "向Claude描述设计的技巧" },
+      "body": { "en": "When asking Claude for design changes, try these phrases:\n\n- \"Make it look like a modern SaaS app\"\n- \"Use a dark theme with purple accents\"\n- \"Add more white space between sections\"\n- \"Make the buttons bigger and more touchable\"\n- \"Center everything and make the max width 600px\"\n\nThe more visual your description, the better the result.", "zh": "让Claude修改设计时，试试这些说法：\n\n- 「让它看起来像现代SaaS应用」\n- 「用深色主题配紫色点缀」\n- 「在部分之间增加更多空白」\n- 「让按钮更大更容易点击」\n- 「居中所有内容，最大宽度600px」\n\n你的描述越形象，结果越好。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Looking Good!", "zh": "好看了！" },
+      "body": { "en": "Your app is now functional AND beautiful. In the next lesson, we'll tackle something every developer faces: **debugging**. When things go wrong (and they will!), Claude helps you fix them.", "zh": "你的应用现在既能用又好看。下一课我们处理每个开发者都会遇到的事：**调试**。当出问题时（一定会的！），Claude帮你修复。" }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": 4,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Time to Talk to Claude!", "zh": "是时候和Claude对话了！" },
+      "body": { "en": "This is the moment you've been preparing for. You're going to **start Claude Code** and ask it to build something real — a webpage about you.\n\nRemember: you're the director. You tell Claude what to create, and it handles the code.", "zh": "这就是你一直准备的时刻。你将**启动Claude Code**，让它构建一个真实的东西——一个关于你的网页。\n\n记住：你是导演。你告诉Claude创建什么，它负责代码。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Starting Claude Code", "zh": "启动Claude Code" },
+      "body": { "en": "First, create a folder for your project and navigate into it. Then type **claude** to start a conversation. Claude will greet you and wait for your instructions.", "zh": "首先，创建一个项目文件夹并进入。然后输入 **claude** 开始对话。Claude会打招呼并等待你的指示。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Start Claude", "zh": "试试：启动Claude" },
+      "body": { "en": "Type **claude** to start your AI coding assistant.", "zh": "输入 **claude** 启动你的AI编程助手。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude", "output": "╭──────────────────────────────╮\n│   Claude Code v2.1.0        │\n│   Ready to help you build!  │\n╰──────────────────────────────╯\n\nHi! I'm Claude. What would you like to build today?", "successMsg": "Claude is ready! Now let's give it a task." }
+        ],
+        "hints": { "en": "Type: claude", "zh": "输入：claude" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Your First Request", "zh": "你的第一个请求" },
+      "body": { "en": "Now for the exciting part! You're going to ask Claude to **create a simple webpage about you**. Just describe it like you'd tell a friend.\n\nThe key is to be **specific but not technical**. You don't need to say \"create an HTML file with a header tag\" — just say what you want to see.", "zh": "现在是激动人心的部分！你要让Claude**创建一个关于你的简单网页**。就像告诉朋友一样描述。\n\n关键是**具体但不需要技术性**。不需要说「创建一个带header标签的HTML文件」——只说你想看到什么。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Ask Claude to Build", "zh": "试试：让Claude构建" },
+      "body": { "en": "Type the command below to ask Claude to create your webpage.", "zh": "输入下面的命令让Claude创建你的网页。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"create a simple webpage about me\"", "output": "I'll create a personal webpage for you! Let me set that up...\n\n✓ Created index.html\n✓ Added your name and introduction section\n✓ Added a clean, modern design\n✓ Made it mobile-friendly\n\nDone! Open index.html in your browser to see it.", "successMsg": "Claude built your first webpage! How cool is that?" }
+        ],
+        "hints": { "en": "Type: claude \"create a simple webpage about me\"", "zh": "输入：claude \"create a simple webpage about me\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Just Happened?", "zh": "刚才发生了什么？" },
+      "body": { "en": "In seconds, Claude just:\n\n1. **Understood your request** in plain English\n2. **Wrote the HTML code** for a complete webpage\n3. **Created the file** on your computer\n4. **Made it look nice** with modern styling\n\nYou didn't write a single line of code. You described what you wanted, and Claude built it. That's the power of AI-assisted coding!", "zh": "几秒钟内，Claude：\n\n1. **理解了你的请求**\n2. **编写了HTML代码**\n3. **在你的电脑上创建了文件**\n4. **用现代风格设计**使它好看\n\n你没有写一行代码。你描述了你想要的，Claude就构建了它。这就是AI辅助编程的力量！" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Tips for Better Requests", "zh": "更好请求的技巧" },
+      "body": { "en": "Here are some tips for talking to Claude:\n\n- **Be specific**: \"Create a webpage with my name, a photo placeholder, and 3 bullet points about my skills\" is better than \"make a website\"\n- **Use everyday words**: No jargon needed\n- **Iterate**: If it's not perfect, just ask Claude to change it\n- **Think in pieces**: Ask for one thing at a time", "zh": "与Claude交流的技巧：\n\n- **具体**：「创建一个有我名字、照片占位符和3个技能要点的网页」比「做个网站」好\n- **用日常语言**：不需要术语\n- **迭代**：不完美就让Claude改\n- **分步骤**：每次要求一件事" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You Built Something!", "zh": "你做出东西了！" },
+      "body": { "en": "Let that sink in: **you just built a webpage**. You gave Claude an instruction in plain English, and it created a real file on your computer that you can open in a browser.\n\nIn the next lesson, we'll look at what Claude actually created and understand the code — no memorizing required!", "zh": "好好感受一下：**你刚做了一个网页**。你用简单的语言给Claude一个指令，它就在你的电脑上创建了一个真实的文件，可以在浏览器中打开。\n\n下一课我们会看看Claude到底创建了什么，理解代码——不需要记忆！" }
+    }
+  ]
+}

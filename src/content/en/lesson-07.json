@@ -1,0 +1,52 @@
+{
+  "id": 7,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Time to Go Live!", "zh": "是时候上线了！" },
+      "body": { "en": "You've built a webpage and customized it. Now comes the most exciting part: **putting it on the internet** where anyone with the link can see it.\n\nThis process is called **deployment**. Think of it like printing a poster and hanging it in a public place — except the \"public place\" is the entire internet.", "zh": "你已经建了网页并自定义了它。现在到了最激动人心的部分：**把它放到互联网上**，任何有链接的人都能看到。\n\n这个过程叫**部署**。就像打印海报挂在公共场所——只是「公共场所」是整个互联网。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Is Cloudflare Pages?", "zh": "什么是Cloudflare Pages？" },
+      "body": { "en": "**Cloudflare Pages** is a free service that hosts your website. \"Hosting\" means they keep your files on their servers so anyone can access them through a URL.\n\nIt's like renting a tiny shop in a giant mall — except it's free, and the mall has billions of visitors.", "zh": "**Cloudflare Pages**是一个免费的网站托管服务。「托管」意味着他们在服务器上保存你的文件，任何人都能通过URL访问。\n\n就像在大商场租了个小店——只是它免费，而且商场有数十亿访客。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "Step 1: Install Wrangler", "zh": "第一步：安装Wrangler" },
+      "body": { "en": "**Wrangler** is Cloudflare's command-line tool. It's what we use to upload your site. Copy and paste this command:", "zh": "**Wrangler**是Cloudflare的命令行工具。我们用它上传你的网站。复制粘贴这个命令：" },
+      "codeBlock": { "code": "npm install -g wrangler", "label": "terminal" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Step 2: Log In to Cloudflare", "zh": "第二步：登录Cloudflare" },
+      "body": { "en": "You'll need a free Cloudflare account. Run **wrangler login** in your terminal — it'll open a browser window where you can sign up or log in. It only takes a minute.", "zh": "你需要一个免费的Cloudflare账号。在终端运行 **wrangler login**——它会打开浏览器窗口让你注册或登录。只需要一分钟。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Step 3: Deploy!", "zh": "第三步：部署！" },
+      "body": { "en": "This is it — the moment of truth. One command will take your files and put them on the internet. Make sure you're in your project folder, then run the deploy command.", "zh": "就是这一刻——真正的时刻。一条命令就能把你的文件放到互联网上。确保你在项目文件夹里，然后运行部署命令。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Deploy Your Site!", "zh": "试试：部署你的网站！" },
+      "body": { "en": "Type the deploy command to publish your website to the internet.", "zh": "输入部署命令将你的网站发布到互联网。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "npx wrangler pages deploy dist/", "output": "✓ Uploading files...\n✓ Deployment complete!\n\n🎉 Your site is live at:\nhttps://my-site-abc.pages.dev\n\nShare this link with anyone!", "successMsg": "YOUR WEBSITE IS LIVE ON THE INTERNET! 🎉" }
+        ],
+        "hints": { "en": "Type: npx wrangler pages deploy dist/", "zh": "输入：npx wrangler pages deploy dist/" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You're on the Internet!", "zh": "你上线了！" },
+      "body": { "en": "Take a moment to appreciate this: **you have a live website on the internet**. You can share that URL with friends, family, or even put it on your resume.\n\nYou went from \"I've never coded before\" to \"here's my website\" in just a few lessons. That's not just learning — that's shipping.", "zh": "感受一下：**你有一个在互联网上的真实网站了**。你可以把URL分享给朋友、家人，甚至放在简历上。\n\n你从「我从没编过程」到「这是我的网站」只用了几课。这不只是学习——这是真正的上线。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What's Next: Building Something Real", "zh": "接下来：构建真正的东西" },
+      "body": { "en": "Congratulations on completing Week 1! 🎉 You now have all the fundamental skills:\n\n- Use the terminal\n- Talk to Claude Code\n- Understand what code means\n- Edit with words\n- Deploy to the internet\n\nIn Week 2, you'll use these skills to **build a real project from scratch** — something you can put on your portfolio. The best part? You already know everything you need.", "zh": "恭喜完成第一周！🎉 你现在掌握了所有基础技能：\n\n- 使用终端\n- 与Claude Code对话\n- 理解代码含义\n- 用文字编辑\n- 部署到互联网\n\n第二周你将用这些技能**从零构建一个真实项目**——可以放在作品集里的东西。最棒的是？你已经知道了所需的一切。" }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": 13,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "When Things Go Wrong", "zh": "当事情出错时" },
+      "body": { "en": "Bugs happen to everyone — even professional developers spend **30-50% of their time debugging**. The difference is they don't panic. They have a process.\n\nWith Claude Code, debugging becomes a conversation: \"I'm seeing this error, help me fix it.\" Claude reads the error, finds the problem, and suggests a fix.", "zh": "Bug对每个人都会发生——即使专业开发者也花**30-50%的时间调试**。区别是他们不慌。他们有方法。\n\n使用Claude Code，调试变成对话：「我看到这个错误，帮我修复。」Claude读取错误、找到问题并建议修复。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Reading Error Messages", "zh": "阅读错误信息" },
+      "body": { "en": "Error messages look scary, but they're actually **helpful clues**. They usually tell you:\n\n1. **What went wrong** — the type of error\n2. **Where it happened** — the file and line number\n3. **What was expected** — what the code expected vs. what it got\n\nYou don't need to understand every word. Just copy the error and give it to Claude.", "zh": "错误信息看起来很吓人，但它们实际上是**有用的线索**。通常告诉你：\n\n1. **什么出错了** —— 错误类型\n2. **在哪出错** —— 文件和行号\n3. **期望什么** —— 代码期望 vs 实际得到的\n\n不需要理解每个词。复制错误给Claude就行。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Debug with Claude", "zh": "试试：用Claude调试" },
+      "body": { "en": "Give Claude an error message and ask it to fix the problem.", "zh": "把错误信息给Claude并让它修复问题。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"I'm getting an error: Cannot read property 'length' of undefined\"", "output": "I can see the issue! This error means the code is trying to read the length of a variable that doesn't exist yet.\n\n✓ Found the bug in app.js line 15\n✓ Added a null check before accessing the property\n✓ Added a default empty array as fallback\n\nThe error should be gone now. This is a very common bug — you handled it like a pro!", "successMsg": "Bug fixed! You're debugging like a developer!" }
+        ],
+        "hints": { "en": "Type: claude \"I'm getting an error: Cannot read property 'length' of undefined\"", "zh": "输入：claude \"I'm getting an error: Cannot read property 'length' of undefined\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Common Errors Explained", "zh": "常见错误解释" },
+      "body": { "en": "Here are errors you might see and what they mean:\n\n- **\"Cannot read property of undefined\"** — trying to use something that doesn't exist\n- **\"Unexpected token\"** — a typo in the code (missing bracket, comma)\n- **\"404 Not Found\"** — a file or page can't be found\n- **\"CORS error\"** — security rules blocking a request\n\nFor all of these: **copy the error, paste it to Claude, ask for a fix**.", "zh": "你可能看到的错误及含义：\n\n- **\"Cannot read property of undefined\"** —— 尝试使用不存在的东西\n- **\"Unexpected token\"** —— 代码中的拼写错误（缺少括号、逗号）\n- **\"404 Not Found\"** —— 找不到文件或页面\n- **\"CORS error\"** —— 安全规则阻止了请求\n\n对于所有这些：**复制错误，粘贴给Claude，要求修复**。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "The Debugging Process", "zh": "调试流程" },
+      "body": { "en": "When something doesn't work:\n\n1. **Don't panic** — bugs are normal\n2. **Check the console** — open browser DevTools (F12) and look at the Console tab\n3. **Copy the error** — the exact message matters\n4. **Tell Claude** — paste the error and describe what you expected\n5. **Test the fix** — refresh and see if it works\n6. **Repeat if needed** — some bugs take a few rounds\n\nThis process works for 95% of problems.", "zh": "当东西不工作时：\n\n1. **不要慌** —— bug是正常的\n2. **检查控制台** —— 打开浏览器DevTools（F12）看Console标签\n3. **复制错误** —— 准确的信息很重要\n4. **告诉Claude** —— 粘贴错误并描述你的期望\n5. **测试修复** —— 刷新看是否有效\n6. **需要的话重复** —— 有些bug需要几轮\n\n这个流程能解决95%的问题。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Bugs Are Learning Opportunities", "zh": "Bug是学习机会" },
+      "body": { "en": "Every bug you encounter teaches you something. After a while, you'll start to **recognize patterns** — \"oh, this is probably a null check issue\" or \"I bet there's a missing comma.\"\n\nThis is how real developers grow. Not by never making mistakes, but by getting better at fixing them.", "zh": "你遇到的每个bug都在教你东西。慢慢地你会开始**识别模式**——「哦，这可能是空值检查的问题」或「我猜少了个逗号。」\n\n这就是真正的开发者成长的方式。不是从不犯错，而是越来越善于修复。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Ready for Launch Day!", "zh": "准备好上线日了！" },
+      "body": { "en": "You now know how to build, style, AND debug with Claude. In the final lesson, you'll **polish and deploy your app** for the world to see. This is it — Launch Day!", "zh": "你现在知道如何用Claude构建、设计和调试了。最后一课你将**完善并部署你的应用**让全世界看到。就是这——上线日！" }
+    }
+  ]
+}

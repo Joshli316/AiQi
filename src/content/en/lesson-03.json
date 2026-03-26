@@ -1,0 +1,48 @@
+{
+  "id": 3,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Before We Start", "zh": "开始之前" },
+      "body": { "en": "To install Claude Code, you'll need two things already on your computer:\n\n1. **Node.js** — a tool that lets code run on your computer\n2. **A terminal** — which you already learned to use!\n\nDon't worry if you don't have Node.js yet. We'll walk through everything.", "zh": "安装Claude Code之前，你的电脑需要两样东西：\n\n1. **Node.js** —— 让代码在电脑上运行的工具\n2. **终端** —— 你已经学会使用了！\n\n如果还没有Node.js也别担心。我们会一步步教你。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "Step 1: Check for Node.js", "zh": "第一步：检查Node.js" },
+      "body": { "en": "Open your terminal and paste this command. If you see a version number (like v18.0.0), you're good! If not, visit **nodejs.org** and download it.", "zh": "打开终端粘贴这个命令。如果你看到版本号（如 v18.0.0），就没问题！如果没有，访问 **nodejs.org** 下载安装。" },
+      "codeBlock": { "code": "node --version", "label": "terminal" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "Step 2: Install Claude Code", "zh": "第二步：安装Claude Code" },
+      "body": { "en": "This one command downloads and installs Claude Code on your computer. Copy it, paste it into your terminal, and press Enter. It might take a minute — that's normal!", "zh": "这条命令会在你的电脑上下载并安装Claude Code。复制它，粘贴到终端，按回车。可能需要一分钟——这很正常！" },
+      "codeBlock": { "code": "npm install -g @anthropic-ai/claude-code", "label": "terminal" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Step 3: Verify Installation", "zh": "第三步：验证安装" },
+      "body": { "en": "Let's make sure Claude Code installed correctly. We'll run a simple command that asks Claude Code for its version number. If it shows a version, you're all set!", "zh": "让我们确认Claude Code安装成功了。运行一个简单命令查看版本号。如果显示版本号，就大功告成！" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Check Claude Version", "zh": "试试：检查Claude版本" },
+      "body": { "en": "Type the command below to verify Claude Code is installed.", "zh": "输入下面的命令来验证Claude Code已安装。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude --version", "output": "claude-code v2.1.0", "successMsg": "Claude Code is installed! You're ready to go!" }
+        ],
+        "hints": { "en": "Type: claude --version", "zh": "输入：claude --version" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Step 4: First Run & Authentication", "zh": "第四步：首次运行和认证" },
+      "body": { "en": "The first time you run Claude Code, it will ask you to **sign in** with your Anthropic account. Just follow the prompts — it'll open a browser window for you to log in.\n\nOnce you're signed in, Claude Code remembers you. You won't need to do this again.", "zh": "第一次运行Claude Code时，它会要求你用Anthropic账号**登录**。按照提示操作——它会打开浏览器窗口让你登录。\n\n登录后，Claude Code会记住你，以后不需要再次登录。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You're All Set!", "zh": "准备完毕！" },
+      "body": { "en": "Amazing! You've just:\n\n- Checked your prerequisites\n- Installed Claude Code\n- Verified it works\n\nIn the next lesson, you'll have your **first real conversation** with Claude and watch it build something from scratch. This is where it gets really fun!", "zh": "太棒了！你刚刚完成了：\n\n- 检查了前置要求\n- 安装了Claude Code\n- 验证了它能用\n\n下一课你将和Claude进行**第一次真正的对话**，看它从零开始构建。真正好玩的来了！" }
+    }
+  ]
+}

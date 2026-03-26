@@ -1,0 +1,77 @@
+{
+  "id": 14,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Launch Day!", "zh": "上线日！" },
+      "body": { "en": "This is it — the final lesson! You've built an app from scratch, styled it, and debugged it. Now it's time to **polish it up and ship it** to the internet.\n\nBy the end of this lesson, you'll have a **live app** with a URL you can share with anyone.", "zh": "最后一课！你从零构建了应用、设计了样式、调试了bug。现在是时候**润色并发布**到互联网了。\n\n这节课结束时，你将有一个可以分享给任何人的**在线应用**。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Pre-Launch Checklist", "zh": "上线前检查清单" },
+      "body": { "en": "Before shipping, let's do a quick check:\n\n- Does the app load without errors?\n- Do all buttons work as expected?\n- Does it look good on mobile?\n- Is the title and description correct?\n- Does data save and load properly?\n\nAsk Claude to help: \"Check my app for any issues before I deploy.\"", "zh": "上线前快速检查：\n\n- 应用能否无错误加载？\n- 所有按钮是否正常工作？\n- 手机上好看吗？\n- 标题和描述正确吗？\n- 数据能否正确保存和加载？\n\n让Claude帮忙：「部署前检查我的应用有没有问题。」" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Final Polish", "zh": "最后润色" },
+      "body": { "en": "Small details make a big difference:\n\n- **Add a favicon** — the small icon in the browser tab\n- **Update the page title** — what shows in the browser tab\n- **Add a meta description** — for when you share the link\n- **Test on different screen sizes** — resize your browser\n\nClaude can handle all of these with one request: \"Add finishing touches — favicon, meta tags, and make sure it works on all screen sizes.\"", "zh": "小细节产生大影响：\n\n- **添加favicon** —— 浏览器标签中的小图标\n- **更新页面标题** —— 浏览器标签显示的内容\n- **添加meta描述** —— 分享链接时的说明\n- **测试不同屏幕尺寸** —— 调整浏览器大小\n\nClaude一个请求就能处理：「添加最后的润色——favicon、meta标签，确保所有屏幕尺寸都好用。」" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Deploy Your App!", "zh": "试试：部署你的应用！" },
+      "body": { "en": "Deploy your finished app to Cloudflare Pages!", "zh": "把你的应用部署到Cloudflare Pages！" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "npx wrangler pages deploy .", "output": "✓ Uploading files...\n✓ Building project...\n✓ Deployment complete!\n\n🎉 Your app is live at:\nhttps://my-task-tracker.pages.dev\n\nShare this link with the world!", "successMsg": "YOUR APP IS LIVE! You did it! 🎉🚀" }
+        ],
+        "hints": { "en": "Type: npx wrangler pages deploy .", "zh": "输入：npx wrangler pages deploy ." }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What You've Accomplished", "zh": "你完成了什么" },
+      "body": { "en": "Let's take a moment to appreciate everything you've done in 2 weeks:\n\n- Learned to use the terminal\n- Installed and used Claude Code\n- Built a webpage from scratch\n- Understood HTML, CSS, and JavaScript basics\n- Deployed your first site\n- Planned and built a real app\n- Added interactivity and styling\n- Debugged like a developer\n- Shipped a live app to the internet\n\n**You went from zero coding experience to a deployed app.** That's incredible.", "zh": "花一点时间感受你在2周内完成的一切：\n\n- 学会使用终端\n- 安装并使用Claude Code\n- 从零构建网页\n- 理解HTML、CSS和JavaScript基础\n- 部署了第一个网站\n- 规划并构建真正的应用\n- 添加了交互和样式\n- 像开发者一样调试\n- 上线了真实的应用\n\n**你从零编程经验到部署了一个应用。**这太了不起了。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What's Next?", "zh": "接下来做什么？" },
+      "body": { "en": "Your learning doesn't stop here. With the skills you have, you can:\n\n- **Build more projects** — each one teaches you something new\n- **Add features** — make your apps more complex over time\n- **Help others** — teach friends what you've learned\n- **Put it on your resume** — \"Built and deployed web applications using AI tools\"\n\nThe most important thing: **keep building**. Every project makes you better.", "zh": "你的学习不会到此结束。凭借现有技能，你可以：\n\n- **构建更多项目** —— 每个都教你新东西\n- **添加功能** —— 逐渐让应用更复杂\n- **帮助他人** —— 教朋友你学到的\n- **写进简历** —— 「使用AI工具构建并部署了Web应用」\n\n最重要的：**继续构建**。每个项目都让你更厉害。" }
+    },
+    {
+      "type": "quiz",
+      "title": { "en": "Final Check: You're a Builder!", "zh": "最后检查：你是建造者了！" },
+      "body": { "en": "One last quiz to celebrate how far you've come!", "zh": "最后一个测验来庆祝你走了多远！" },
+      "quiz": {
+        "questions": [
+          {
+            "question": { "en": "What should you do when you see an error?", "zh": "看到错误时应该怎么做？" },
+            "options": [
+              { "en": "Panic and give up", "zh": "恐慌并放弃" },
+              { "en": "Copy the error and ask Claude to help fix it", "zh": "复制错误让Claude帮忙修复" },
+              { "en": "Delete everything and start over", "zh": "删除一切重新开始" },
+              { "en": "Ignore it", "zh": "忽略它" }
+            ],
+            "correctIndex": 1,
+            "explanation": { "en": "Bugs are normal! Copy the error, give it to Claude, and iterate. That's the debugging process.", "zh": "Bug是正常的！复制错误，给Claude，然后迭代。这就是调试流程。" }
+          },
+          {
+            "question": { "en": "What's the most important skill in AI-assisted coding?", "zh": "AI辅助编程最重要的技能是什么？" },
+            "options": [
+              { "en": "Memorizing syntax", "zh": "记忆语法" },
+              { "en": "Typing fast", "zh": "打字快" },
+              { "en": "Communicating your vision clearly", "zh": "清晰地传达你的愿景" },
+              { "en": "Understanding algorithms", "zh": "理解算法" }
+            ],
+            "correctIndex": 2,
+            "explanation": { "en": "You're the director! Clear communication is the superpower. You've proven that throughout this entire course.", "zh": "你是导演！清晰的沟通是超能力。你在整个课程中已经证明了这一点。" }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Congratulations, Builder!", "zh": "恭喜你，建造者！" },
+      "body": { "en": "You started this course not knowing what a terminal was. Now you have **a live app on the internet** that you built with AI.\n\nYou are proof that **anyone can build with AI** — no CS degree required. The future belongs to people who can communicate their ideas to AI tools and ship real things.\n\nThat's you now. Go build something amazing! 🚀", "zh": "你开始这个课程时还不知道终端是什么。现在你有了**一个用AI构建的在线应用**。\n\n你证明了**任何人都能用AI构建**——不需要计算机学位。未来属于能够向AI工具传达想法并发布真实产品的人。\n\n那就是现在的你。去做一些了不起的东西吧！🚀" }
+    }
+  ]
+}

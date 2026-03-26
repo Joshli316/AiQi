@@ -1,0 +1,46 @@
+{
+  "id": 10,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Building the Foundation", "zh": "构建基础" },
+      "body": { "en": "Time to turn your plan into a real app! In this lesson, Claude will create the **file structure** — the skeleton of your app. Think of it like building the frame of a house before adding walls and furniture.", "zh": "是时候把计划变成真正的应用了！这节课Claude会创建**文件结构**——应用的骨架。就像盖房子先建框架再加墙壁和家具。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Files Does an App Need?", "zh": "一个应用需要什么文件？" },
+      "body": { "en": "A basic web app needs just three types of files:\n\n- **HTML** (.html) — the structure (what's on the page)\n- **CSS** (.css) — the style (how it looks)\n- **JavaScript** (.js) — the behavior (what it does)\n\nClaude will create all of these for you based on your CLAUDE.md plan.", "zh": "一个基本的Web应用只需要三种文件：\n\n- **HTML** (.html) —— 结构（页面上有什么）\n- **CSS** (.css) —— 样式（看起来怎样）\n- **JavaScript** (.js) —— 行为（做什么）\n\nClaude会根据你的CLAUDE.md计划创建这些。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Ask Claude to Build the Structure", "zh": "试试：让Claude构建结构" },
+      "body": { "en": "Tell Claude to create the basic file structure for your task tracker.", "zh": "让Claude为你的任务管理器创建基础文件结构。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "claude \"create the basic file structure for a task tracker app\"", "output": "I'll set up the project structure based on your CLAUDE.md.\n\n✓ Created index.html — main page with task list UI\n✓ Created style.css — clean, modern styling\n✓ Created app.js — task management logic\n\nYour app structure is ready! Open index.html to see it.", "successMsg": "The skeleton is built! Claude created your entire app structure." }
+        ],
+        "hints": { "en": "Type: claude \"create the basic file structure for a task tracker app\"", "zh": "输入：claude \"create the basic file structure for a task tracker app\"" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Understanding the HTML Structure", "zh": "理解HTML结构" },
+      "body": { "en": "Claude created an HTML file with:\n\n- An **input field** where users type task names\n- An **\"Add\" button** to add new tasks\n- A **task list** area where tasks appear\n- Links to your CSS and JavaScript files\n\nYou already know HTML tags from Lesson 5 — can you picture what the code looks like?", "zh": "Claude创建了一个HTML文件，包含：\n\n- 用户输入任务名的**输入框**\n- **「添加」按钮**用于添加新任务\n- 显示任务的**任务列表**区域\n- 链接到CSS和JavaScript文件\n\n你在第5课已经学了HTML标签——能想象代码是什么样吗？" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Understanding CSS Styling", "zh": "理解CSS样式" },
+      "body": { "en": "The CSS file controls **how things look**:\n\n- Colors, fonts, and sizes\n- Spacing between elements\n- How things change on mobile phones\n\nCSS is like the **interior design** of your app. Claude writes it for you, but knowing it exists helps you ask for better changes.", "zh": "CSS文件控制**东西的外观**：\n\n- 颜色、字体和大小\n- 元素之间的间距\n- 手机上的显示效果\n\nCSS就像应用的**室内设计**。Claude帮你写，但知道它的存在能帮你更好地提出修改要求。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Understanding JavaScript", "zh": "理解JavaScript" },
+      "body": { "en": "JavaScript is the **behavior** — it makes things happen when users interact:\n\n- When you click \"Add\", JavaScript adds a task to the list\n- When you click a checkbox, JavaScript marks it complete\n- When you reload the page, JavaScript loads your saved tasks\n\nYou don't need to write JavaScript — that's Claude's job. But knowing what it does helps you debug and iterate.", "zh": "JavaScript是**行为**——用户交互时让事情发生：\n\n- 点「添加」时，JavaScript把任务加到列表\n- 点复选框时，JavaScript标记任务完成\n- 重新加载页面时，JavaScript加载保存的任务\n\n你不需要写JavaScript——那是Claude的工作。但知道它做什么有助于你调试和改进。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Structure Complete!", "zh": "结构完成！" },
+      "body": { "en": "You now have a basic app with HTML, CSS, and JavaScript files. If you open index.html in your browser, you should see the beginning of your task tracker.\n\nIn the next lesson, we'll make it **interactive** — buttons that work, tasks that save. The app is about to come alive!", "zh": "你现在有了包含HTML、CSS和JavaScript文件的基础应用。在浏览器打开index.html，你应该能看到任务管理器的雏形。\n\n下一课我们让它**可交互**——按钮能用、任务能保存。应用即将活起来！" }
+    }
+  ]
+}

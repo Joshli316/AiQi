@@ -1,0 +1,47 @@
+{
+  "id": 9,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Planning Before Building", "zh": "先规划再动手" },
+      "body": { "en": "Professional developers don't just start typing code. They **plan first**. And with Claude Code, there's a special way to do this: a file called **CLAUDE.md**.\n\nThink of CLAUDE.md as a **brief for your AI assistant** — it tells Claude what the project is, how it should work, and what technologies to use.", "zh": "专业开发者不会直接开始写代码。他们**先规划**。使用Claude Code时，有一种特别的方法：一个叫**CLAUDE.md**的文件。\n\n把CLAUDE.md想象成**给AI助手的简报**——告诉Claude项目是什么、应该怎么工作、用什么技术。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Setting Up Your Project Folder", "zh": "设置项目文件夹" },
+      "body": { "en": "Every project lives in its own folder. Let's create one for your task tracker app. We'll use the **mkdir** command (make directory) to create a new folder, then **cd** to move into it.", "zh": "每个项目都有自己的文件夹。让我们为你的任务管理应用创建一个。我们用**mkdir**命令（创建目录）新建文件夹，然后**cd**进入。" }
+    },
+    {
+      "type": "terminal-exercise",
+      "title": { "en": "Try It: Create Project Folder", "zh": "试试：创建项目文件夹" },
+      "body": { "en": "Create a new folder for your project and navigate into it.", "zh": "为项目创建新文件夹并进入。" },
+      "terminal": {
+        "expectedCommands": [
+          { "command": "mkdir my-project && cd my-project", "output": "student@computer:~/my-project$", "successMsg": "Your project folder is ready!" }
+        ],
+        "hints": { "en": "Type: mkdir my-project && cd my-project", "zh": "输入：mkdir my-project && cd my-project" }
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "What Goes in CLAUDE.md?", "zh": "CLAUDE.md里写什么？" },
+      "body": { "en": "A good CLAUDE.md includes:\n\n- **Project name and description** — what are you building?\n- **Tech stack** — what tools/languages to use\n- **Key features** — what should the app do?\n- **Structure** — how should files be organized?\n\nDon't worry about getting it perfect. A rough plan is better than no plan.", "zh": "好的CLAUDE.md包含：\n\n- **项目名称和描述** —— 你在做什么？\n- **技术栈** —— 用什么工具/语言？\n- **核心功能** —— 应用该做什么？\n- **结构** —— 文件怎么组织？\n\n不用追求完美。粗略的计划比没有计划好。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "Example CLAUDE.md", "zh": "示例CLAUDE.md" },
+      "body": { "en": "Here's a simple CLAUDE.md for a task tracker. You can customize this for any project!", "zh": "这是一个任务管理器的CLAUDE.md示例。你可以为任何项目定制！" },
+      "codeBlock": { "code": "# Task Tracker\n\nA simple task management app.\n\n## Tech Stack\n- HTML, CSS, JavaScript\n- Single page, no frameworks\n- LocalStorage for data\n\n## Features\n- Add new tasks\n- Mark tasks complete\n- Delete tasks\n- Tasks persist after page reload\n\n## Structure\n- index.html (main page)\n- style.css (styling)\n- app.js (logic)", "label": "CLAUDE.md" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Structured Prompting", "zh": "结构化提示" },
+      "body": { "en": "With CLAUDE.md in place, you can give Claude **structured instructions**. Instead of vague requests, you can say:\n\n\"Read the CLAUDE.md and build the basic structure for this project.\"\n\nClaude will read your plan and follow it. This is how professionals work with AI — **clear plans lead to clear results.**", "zh": "有了CLAUDE.md，你可以给Claude**结构化指令**。不再模糊请求，你可以说：\n\n「读CLAUDE.md并为这个项目构建基础结构。」\n\nClaude会读你的计划并遵循。这就是专业人士使用AI的方式——**清晰的计划带来清晰的结果。**" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Plan Made! Let's Build", "zh": "计划完成！开始构建" },
+      "body": { "en": "You've got a project folder and a plan. In the next lesson, Claude will read your CLAUDE.md and build the app structure. You're managing this project like a pro!", "zh": "你有了项目文件夹和计划。下一课Claude会读你的CLAUDE.md并构建应用结构。你已经像专业人士一样管理项目了！" }
+    }
+  ]
+}

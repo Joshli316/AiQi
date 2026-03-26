@@ -1,0 +1,73 @@
+{
+  "id": 5,
+  "steps": [
+    {
+      "type": "text",
+      "title": { "en": "Let's Read Some Code!", "zh": "让我们读代码吧！" },
+      "body": { "en": "Claude just built you a webpage. But what did it actually create? Let's peek under the hood — not to memorize anything, but to **understand the basics** so you can give Claude better instructions.\n\nThink of reading code like reading a **recipe**. You don't need to be a chef to understand the ingredients list.", "zh": "Claude刚帮你建了一个网页。但它到底创建了什么？让我们看看幕后——不是为了记忆，而是为了**理解基础**，这样你能给Claude更好的指令。\n\n把读代码想象成读**菜谱**。你不需要是厨师才能理解材料清单。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "HTML: The Language of Web Pages", "zh": "HTML：网页的语言" },
+      "body": { "en": "Every webpage is written in **HTML** (HyperText Markup Language). Don't let the name scare you — it's just a way to tell the browser what to show.\n\nHTML uses **tags** — little labels wrapped in angle brackets like `<h1>` and `<p>`. Each tag tells the browser: \"this is a heading\" or \"this is a paragraph\".", "zh": "每个网页都是用**HTML**写的。别被名字吓到——它只是告诉浏览器显示什么的一种方式。\n\nHTML使用**标签**——像 `<h1>` 和 `<p>` 这样用尖括号包裹的小标记。每个标签告诉浏览器：「这是标题」或「这是段落」。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "A Simple HTML Page", "zh": "一个简单的HTML页面" },
+      "body": { "en": "Here's what a basic webpage looks like. See the **tags** on each line? They come in pairs — an opening tag `<h1>` and a closing tag `</h1>`. Everything between them is the content.", "zh": "这是一个基本网页的样子。看到每行的**标签**了吗？它们成对出现——开始标签 `<h1>` 和结束标签 `</h1>`。它们之间的就是内容。" },
+      "codeBlock": { "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>My Page</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is my first webpage.</p>\n</body>\n</html>", "label": "index.html" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "The Two Main Parts: Head & Body", "zh": "两个主要部分：Head和Body" },
+      "body": { "en": "Every HTML page has two main sections:\n\n- **`<head>`** — Information about the page (title, settings). Users don't see this directly.\n- **`<body>`** — Everything users actually see on the page (text, images, buttons).\n\nIt's like a letter: the **head** is the envelope (address, stamp), and the **body** is the actual letter inside.", "zh": "每个HTML页面有两个主要部分：\n\n- **`<head>`** — 页面信息（标题、设置）。用户不直接看到。\n- **`<body>`** — 用户在页面上看到的一切（文字、图片、按钮）。\n\n就像一封信：**head**是信封（地址、邮票），**body**是里面的信。" }
+    },
+    {
+      "type": "text",
+      "title": { "en": "Common Tags You'll See", "zh": "你会遇到的常见标签" },
+      "body": { "en": "Here are the most common HTML tags — think of them as **building blocks**:\n\n- `<h1>` to `<h6>` — Headings (h1 is biggest, h6 is smallest)\n- `<p>` — Paragraph of text\n- `<a>` — A link to another page\n- `<img>` — An image\n- `<div>` — A container (like a box to organize things)\n- `<button>` — A clickable button\n\nYou don't need to memorize these. When you tell Claude to add something, it uses the right tags automatically.", "zh": "最常见的HTML标签——把它们想成**积木块**：\n\n- `<h1>` 到 `<h6>` — 标题（h1最大，h6最小）\n- `<p>` — 段落\n- `<a>` — 链接\n- `<img>` — 图片\n- `<div>` — 容器（像盒子一样组织内容）\n- `<button>` — 按钮\n\n不需要记住这些。你让Claude添加东西时，它会自动用正确的标签。" }
+    },
+    {
+      "type": "copy-block",
+      "title": { "en": "Reading Claude's Code", "zh": "阅读Claude的代码" },
+      "body": { "en": "The webpage Claude created for you probably looks something like this. Can you spot the heading, the paragraph, and the list?", "zh": "Claude为你创建的网页大概是这样的。你能找到标题、段落和列表吗？" },
+      "codeBlock": { "code": "<body>\n  <h1>About Me</h1>\n  <p>Hi! I'm a recent graduate exploring tech.</p>\n  <h2>My Skills</h2>\n  <ul>\n    <li>Communication</li>\n    <li>Problem Solving</li>\n    <li>AI Tools</li>\n  </ul>\n</body>", "label": "index.html" }
+    },
+    {
+      "type": "quiz",
+      "title": { "en": "Quick Check: HTML Basics", "zh": "快速检查：HTML基础" },
+      "body": { "en": "Let's see if you can read HTML like a recipe now!", "zh": "看看你现在能不能像读菜谱一样读HTML！" },
+      "quiz": {
+        "questions": [
+          {
+            "question": { "en": "What does the <h1> tag create?", "zh": "<h1> 标签创建什么？" },
+            "options": [
+              { "en": "An image", "zh": "图片" },
+              { "en": "A heading (the largest size)", "zh": "标题（最大的那种）" },
+              { "en": "A paragraph", "zh": "段落" },
+              { "en": "A link", "zh": "链接" }
+            ],
+            "correctIndex": 1,
+            "explanation": { "en": "Right! <h1> is the main heading — the biggest text on the page.", "zh": "对！<h1>是主标题——页面上最大的文字。" }
+          },
+          {
+            "question": { "en": "Where does visible page content go?", "zh": "可见的页面内容放在哪里？" },
+            "options": [
+              { "en": "In the <head> section", "zh": "在<head>部分" },
+              { "en": "In the <title> tag", "zh": "在<title>标签里" },
+              { "en": "In the <body> section", "zh": "在<body>部分" },
+              { "en": "Outside the HTML tags", "zh": "在HTML标签外面" }
+            ],
+            "correctIndex": 2,
+            "explanation": { "en": "The <body> is where all the visible content lives — text, images, buttons, everything users see.", "zh": "<body>是所有可见内容所在——文字、图片、按钮，用户看到的一切。" }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "title": { "en": "You Can Read Code Now!", "zh": "你现在会读代码了！" },
+      "body": { "en": "You don't need to write HTML from scratch — that's Claude's job. But now you can **understand what Claude created**, which means you can give better feedback.\n\nInstead of saying \"change something on the page\", you can say \"change the heading\" or \"add another paragraph\". That's the director giving clear notes!\n\nNext up: you'll learn to **edit your page** just by describing what you want to change.", "zh": "你不需要从头写HTML——那是Claude的工作。但现在你可以**理解Claude创建的内容**，这意味着你能给出更好的反馈。\n\n不再说「改改页面上的东西」，你可以说「改标题」或「加一段文字」。这就是导演给出清晰反馈！\n\n下一课：你将学会仅通过描述来**编辑你的页面**。" }
+    }
+  ]
+}
