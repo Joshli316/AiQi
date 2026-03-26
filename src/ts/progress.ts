@@ -76,10 +76,6 @@ export function getProgress(): ProgressEntry[] {
   return getLocalProgress();
 }
 
-export function isLessonComplete(lessonId: number): boolean {
-  return getLocalProgress().some(p => p.lessonId === lessonId);
-}
-
 export function getCompletedCount(): number {
   return getLocalProgress().length;
 }

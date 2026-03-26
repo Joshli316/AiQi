@@ -1,4 +1,4 @@
-import { t, getLang } from './i18n';
+import { getLang } from './i18n';
 
 interface User {
   id?: string;
