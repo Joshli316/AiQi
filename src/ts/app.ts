@@ -1,8 +1,7 @@
 import { t, getLang, toggleLang, type Lang } from './i18n';
 import { renderLesson, unmountLesson } from './lessons';
 import { renderDashboard } from './progress';
-import { renderPaywall } from './paywall';
-import { initAuth, renderAuthButton } from './auth';
+import { initAuth } from './auth';
 import { triggerConfetti, showCelebration } from './celebrations';
 
 type Route = 'home' | 'lessons' | 'lesson' | 'dashboard';
@@ -257,12 +256,6 @@ function render(): void {
   unmountLesson();
 
   if (currentRoute === 'lesson' && currentParams.lessonId) {
-    // Paywall disabled — all lessons free during testing
-    // TODO: Re-enable when payment system is ready
-    // if (currentParams.lessonId > 5 && !window.__isPurchased()) {
-    //   app.innerHTML = renderHeader() + renderPaywall() + renderBottomNav();
-    //   return;
-    // }
     app.innerHTML = '';
     renderLesson(app, currentParams.lessonId);
     return;
