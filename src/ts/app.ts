@@ -82,7 +82,11 @@ function parseHash(): { route: Route; params: RouteParams } {
   const parts = hash.split('/').filter(Boolean);
 
   if (parts[0] === 'lesson' && parts[1]) {
-    return { route: 'lesson', params: { lessonId: parseInt(parts[1], 10) } };
+    const lessonId = parseInt(parts[1], 10);
+    if (lessonId >= 1 && lessonId <= 14) {
+      return { route: 'lesson', params: { lessonId } };
+    }
+    return { route: 'lessons', params: {} };
   }
 
   const routeMap: Record<string, Route> = {
@@ -120,6 +124,7 @@ function renderBottomNav(): string {
     <nav class="bottom-nav" aria-label="Main navigation">
       ${items.map(item => `
         <button class="nav-item ${currentRoute === item.route ? 'nav-item--active' : ''}"
+                ${currentRoute === item.route ? 'aria-current="page"' : ''}
                 onclick="window.__navigate('${item.route}')">
           <span class="nav-item__icon">${icons[item.icon]}</span>
           <span>${t(item.labelKey)}</span>
