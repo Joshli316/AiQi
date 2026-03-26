@@ -67,3 +67,10 @@ wrangler pages deploy dist/
 - **Tone**: Encouraging friend, not professor. No jargon without inline explanation. Celebrate mistakes as learning.
 - **Free lessons**: 1-5 are fully free, no account needed. Lessons 6-14 require one-time purchase.
 - **Progress data model**: `{ userId, lessonId, completedAt, exercisePassed }` — nothing more.
+
+## Current Task: UI/UX Redesign
+- **Plan file**: `plan-redesign.md` — 11 steps, visual + layout redesign only
+- **Design direction**: Codecademy-inspired — deep navy, vibrant accents, bold typography, generous whitespace
+- **Scope**: CSS overhaul + HTML template updates in TS render functions. NO changes to core logic, routing, i18n, auth, content, or API.
+- **Skill**: Use `/ui-ux-pro-max` to generate the design system (Step 1 of the plan)
+- **Key constraint**: Must look great on mobile (375px+), bilingual text (ZH is wider than EN — check overflow)

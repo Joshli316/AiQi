@@ -159,15 +159,15 @@ export function renderDashboard(): string {
         ` : ''}
 
         <div class="dashboard__stats">
-          <div class="stat-card">
-            <div class="stat-card__value">${completed.size}</div>
+          <div class="stat-card stat-card--lessons">
+            <div class="stat-card__value">${completed.size}/14</div>
             <div class="stat-card__label">${t('dashboard.completed')}</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card stat-card--progress">
             <div class="stat-card__value">${percentage}%</div>
             <div class="stat-card__label">${t('dashboard.percentage')}</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card stat-card--streak">
             <div class="stat-card__value">${streak}</div>
             <div class="stat-card__label">${t('dashboard.streak')}</div>
           </div>

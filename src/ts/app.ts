@@ -23,6 +23,14 @@ const icons = {
   dashboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
 };
 
+// SVG icons for feature cards (Lucide-style)
+const featureIcons: Record<string, string> = {
+  terminal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>',
+  bilingual: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+  stepbystep: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+  portfolio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>',
+};
+
 // Lesson titles for both languages
 const lessonTitles: Record<Lang, string[]> = {
   en: [
@@ -151,27 +159,31 @@ function renderHome(): string {
             <div class="hero-terminal__line"><span class="hero-terminal__prompt">$</span> claude "build me a personal website"</div>
             <div class="hero-terminal__line hero-terminal__line--response">✓ Created index.html</div>
             <div class="hero-terminal__line hero-terminal__line--response">✓ Added modern styling</div>
-            <div class="hero-terminal__line hero-terminal__line--success">🎉 Your site is live at mysite.pages.dev</div>
+            <div class="hero-terminal__line hero-terminal__line--success">✓ Your site is live at mysite.pages.dev</div>
           </div>
         </div>
         <button class="hero__cta" onclick="window.__navigate('lesson', {lessonId: 1})">
           ${t('btn.start')} →
         </button>
-        <p style="margin-top: var(--space-md); font-size: var(--text-sm); color: var(--text-muted);">${t('hero.proof')}</p>
+        <div class="hero__summary">
+          <span class="hero__summary-item"><strong>14</strong> ${getLang() === 'zh' ? '课时' : 'lessons'}</span>
+          <span class="hero__summary-item"><strong>~2</strong> ${getLang() === 'zh' ? '小时' : 'hours'}</span>
+        </div>
       </section>
       <section class="features">
-        ${renderFeatureCard('terminal', '💻')}
-        ${renderFeatureCard('bilingual', '🌏')}
-        ${renderFeatureCard('stepbystep', '👣')}
-        ${renderFeatureCard('portfolio', '🚀')}
+        ${renderFeatureCard('terminal')}
+        ${renderFeatureCard('bilingual')}
+        ${renderFeatureCard('stepbystep')}
+        ${renderFeatureCard('portfolio')}
       </section>
     </div>
   `;
 }
 
-function renderFeatureCard(key: string, icon: string): string {
+function renderFeatureCard(key: string): string {
+  const icon = featureIcons[key] || '';
   return `
-    <div class="feature-card">
+    <div class="feature-card feature-card--${key}">
       <div class="feature-card__icon">${icon}</div>
       <div>
         <div class="feature-card__title">${t(`feature.${key}`)}</div>
@@ -200,16 +212,20 @@ function renderLessonList(): string {
     if (completed) stateClass = 'lesson-card--completed';
     else if (isCurrent) stateClass = 'lesson-card--current';
 
-    const badge = completed
+    const checkSvg = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+    const meta = completed
       ? `<span class="lesson-card__badge">${t('completed')}</span>`
-      : `<span class="lesson-card__badge lesson-card__badge--free">${t('free')}</span>`;
+      : isCurrent
+        ? `<span class="lesson-card__badge lesson-card__badge--free">${getLang() === 'zh' ? '继续学习' : 'Continue'}</span>`
+        : '';
 
     return `
       <div class="lesson-card ${stateClass}" onclick="window.__navigate('lesson', {lessonId: ${num}})">
-        <div class="lesson-card__number">${completed ? '✓' : num}</div>
+        <div class="lesson-card__number">${completed ? checkSvg : num}</div>
         <div class="lesson-card__info">
           <div class="lesson-card__title">${title}</div>
-          <div class="lesson-card__meta">${badge}</div>
+          ${meta ? `<div class="lesson-card__meta">${meta}</div>` : ''}
         </div>
       </div>
     `;
