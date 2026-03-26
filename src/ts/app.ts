@@ -139,6 +139,19 @@ function renderHome(): string {
           ${t('hero.title.1')}<br><em>${t('hero.title.2')}</em>
         </h1>
         <p class="hero__subtitle">${t('hero.subtitle')}</p>
+        <div class="hero-terminal">
+          <div class="hero-terminal__bar">
+            <span class="hero-terminal__dot" style="background:#FF5F57"></span>
+            <span class="hero-terminal__dot" style="background:#FFBD2E"></span>
+            <span class="hero-terminal__dot" style="background:#28C840"></span>
+          </div>
+          <div class="hero-terminal__body">
+            <div class="hero-terminal__line"><span class="hero-terminal__prompt">$</span> claude "build me a personal website"</div>
+            <div class="hero-terminal__line hero-terminal__line--response">✓ Created index.html</div>
+            <div class="hero-terminal__line hero-terminal__line--response">✓ Added modern styling</div>
+            <div class="hero-terminal__line hero-terminal__line--success">🎉 Your site is live at mysite.pages.dev</div>
+          </div>
+        </div>
         <button class="hero__cta" onclick="window.__navigate('lesson', {lessonId: 1})">
           ${t('btn.start')} →
         </button>

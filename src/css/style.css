@@ -295,6 +295,66 @@ ul, ol { list-style: none; }
 
 .hero__cta:active { transform: translateY(0); }
 
+/* Hero terminal illustration */
+.hero-terminal {
+  background: var(--bg-terminal);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: var(--space-lg) auto var(--space-xl);
+  max-width: 360px;
+  text-align: left;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-terminal__bar {
+  display: flex;
+  gap: 6px;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255,255,255,0.05);
+}
+
+.hero-terminal__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.hero-terminal__body {
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.8;
+}
+
+.hero-terminal__line {
+  color: #89B4FA;
+  opacity: 0;
+  animation: terminalFadeIn 0.4s ease forwards;
+}
+
+.hero-terminal__line:nth-child(1) { animation-delay: 0.3s; }
+.hero-terminal__line:nth-child(2) { animation-delay: 0.9s; }
+.hero-terminal__line:nth-child(3) { animation-delay: 1.3s; }
+.hero-terminal__line:nth-child(4) { animation-delay: 1.7s; }
+
+.hero-terminal__line--response {
+  color: var(--text-terminal);
+}
+
+.hero-terminal__line--success {
+  color: var(--accent-light);
+}
+
+.hero-terminal__prompt {
+  color: #89B4FA;
+  margin-right: var(--space-sm);
+}
+
+@keyframes terminalFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Feature cards */
 .features {
   display: flex;
