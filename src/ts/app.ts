@@ -137,7 +137,6 @@ function renderHome(): string {
   return `
     <div class="view-enter">
       <section class="hero">
-        <div class="hero__badge">${t('hero.badge')}</div>
         <h1 class="hero__title">
           ${t('hero.title.1')}<br><em>${t('hero.title.2')}</em>
         </h1>
