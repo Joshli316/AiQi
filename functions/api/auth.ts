@@ -1,8 +1,4 @@
-import { verifyGoogleToken, jsonResponse } from './_shared';
-
-interface Env {
-  DB: D1Database;
-}
+import { type Env, verifyGoogleToken, jsonResponse } from './_shared';
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
@@ -12,7 +8,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       return jsonResponse({ error: 'Missing token' }, 400);
     }
 
-    // Verify token with Google's tokeninfo endpoint
     const payload = await verifyGoogleToken(token);
     if (!payload) {
       return jsonResponse({ error: 'Invalid or expired token' }, 401);
@@ -20,7 +15,6 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     const { sub: googleId, email, name } = payload;
 
-    // Upsert user
     const existing = await context.env.DB.prepare(
       'SELECT id FROM users WHERE google_id = ?'
     ).bind(googleId).first<{ id: string }>();

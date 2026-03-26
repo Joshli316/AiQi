@@ -1,25 +1,5 @@
-import { verifyGoogleToken, jsonResponse } from './_shared';
+import { type Env, getAuthenticatedUser, jsonResponse } from './_shared';
 
-interface Env {
-  DB: D1Database;
-}
-
-async function getAuthenticatedUser(context: EventContext<Env, any, any>): Promise<{ id: string } | null> {
-  const auth = context.request.headers.get('Authorization');
-  if (!auth?.startsWith('Bearer ')) return null;
-
-  const token = auth.slice(7);
-
-  // Verify token signature with Google before trusting claims
-  const payload = await verifyGoogleToken(token);
-  if (!payload) return null;
-
-  return context.env.DB.prepare(
-    'SELECT id FROM users WHERE google_id = ?'
-  ).bind(payload.sub).first<{ id: string }>();
-}
-
-// GET — return all progress for user
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   try {
     const user = await getAuthenticatedUser(context);
@@ -37,7 +17,6 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   }
 };
 
-// POST — mark lesson complete
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     const user = await getAuthenticatedUser(context);
@@ -45,20 +24,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       return jsonResponse({ error: 'Unauthorized' }, 401);
     }
 
-    const { lessonId, exercisePassed } = await context.request.json() as {
-      lessonId: number;
-      exercisePassed: boolean;
-    };
+    const body = await context.request.json() as Record<string, unknown>;
+    const lessonId = body.lessonId;
+    const exercisePassed = body.exercisePassed;
 
-    // Upsert progress
+    if (typeof lessonId !== 'number' || lessonId < 1 || lessonId > 14) {
+      return jsonResponse({ error: 'Invalid lessonId' }, 400);
+    }
+
+    const now = new Date().toISOString();
+    const passed = exercisePassed ? 1 : 0;
+
     await context.env.DB.prepare(
       `INSERT INTO progress (user_id, lesson_id, completed_at, exercise_passed)
        VALUES (?, ?, ?, ?)
        ON CONFLICT(user_id, lesson_id) DO UPDATE SET completed_at = ?, exercise_passed = ?`
-    ).bind(
-      user.id, lessonId, new Date().toISOString(), exercisePassed ? 1 : 0,
-      new Date().toISOString(), exercisePassed ? 1 : 0
-    ).run();
+    ).bind(user.id, lessonId, now, passed, now, passed).run();
 
     return jsonResponse({ success: true });
   } catch {

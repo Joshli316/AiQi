@@ -1,4 +1,6 @@
-// Shared utilities for API functions
+export interface Env {
+  DB: D1Database;
+}
 
 interface GoogleTokenPayload {
   sub: string;
@@ -7,10 +9,8 @@ interface GoogleTokenPayload {
   picture?: string;
 }
 
-/**
- * Verify a Google ID token by calling Google's tokeninfo endpoint.
- * Returns the verified payload or null if invalid.
- */
+const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
+
 export async function verifyGoogleToken(idToken: string): Promise<GoogleTokenPayload | null> {
   try {
     const res = await fetch(
@@ -21,8 +21,10 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleTokenPay
 
     const payload = await res.json() as Record<string, string>;
 
-    // Verify required fields exist
     if (!payload.sub || !payload.email) return null;
+
+    // Reject tokens issued for other apps
+    if (payload.aud && payload.aud !== GOOGLE_CLIENT_ID) return null;
 
     return {
       sub: payload.sub,
@@ -33,6 +35,19 @@ export async function verifyGoogleToken(idToken: string): Promise<GoogleTokenPay
   } catch {
     return null;
   }
+}
+
+export async function getAuthenticatedUser(context: EventContext<Env, string, unknown>): Promise<{ id: string } | null> {
+  const auth = context.request.headers.get('Authorization');
+  if (!auth?.startsWith('Bearer ')) return null;
+
+  const token = auth.slice(7);
+  const payload = await verifyGoogleToken(token);
+  if (!payload) return null;
+
+  return context.env.DB.prepare(
+    'SELECT id FROM users WHERE google_id = ?'
+  ).bind(payload.sub).first<{ id: string }>();
 }
 
 export function jsonResponse(data: unknown, status = 200): Response {
