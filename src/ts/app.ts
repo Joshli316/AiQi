@@ -179,20 +179,15 @@ function renderLessonList(): string {
   function renderCard(num: number): string {
     const completed = completedLessons.has(num);
     const isCurrent = num === nextLesson;
-    const isFree = num <= 5;
-    const isLocked = num > 5 && !window.__isPurchased() && !completed;
     const title = getLessonTitle(num);
 
     let stateClass = '';
     if (completed) stateClass = 'lesson-card--completed';
     else if (isCurrent) stateClass = 'lesson-card--current';
-    else if (isLocked) stateClass = 'lesson-card--locked';
 
     const badge = completed
       ? `<span class="lesson-card__badge">${t('completed')}</span>`
-      : isFree
-        ? `<span class="lesson-card__badge lesson-card__badge--free">${t('free')}</span>`
-        : `<span class="lesson-card__badge lesson-card__badge--paid">${t('paid')}</span>`;
+      : `<span class="lesson-card__badge lesson-card__badge--free">${t('free')}</span>`;
 
     return `
       <div class="lesson-card ${stateClass}" onclick="window.__navigate('lesson', {lessonId: ${num}})">
@@ -231,11 +226,12 @@ function render(): void {
   unmountLesson();
 
   if (currentRoute === 'lesson' && currentParams.lessonId) {
-    // Check paywall
-    if (currentParams.lessonId > 5 && !window.__isPurchased()) {
-      app.innerHTML = renderHeader() + renderPaywall() + renderBottomNav();
-      return;
-    }
+    // Paywall disabled — all lessons free during testing
+    // TODO: Re-enable when payment system is ready
+    // if (currentParams.lessonId > 5 && !window.__isPurchased()) {
+    //   app.innerHTML = renderHeader() + renderPaywall() + renderBottomNav();
+    //   return;
+    // }
     app.innerHTML = '';
     renderLesson(app, currentParams.lessonId);
     return;
