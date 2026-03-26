@@ -5,8 +5,6 @@ const STORAGE_KEY = 'aiqi-lang';
 let currentLang: Lang = (localStorage.getItem(STORAGE_KEY) as Lang) || 'zh';
 
 const translations: Record<string, Record<Lang, string>> = {
-  'app.title': { en: 'AiQi', zh: 'AI起' },
-  'app.subtitle': { en: 'AI起', zh: 'AiQi' },
   'nav.home': { en: 'Home', zh: '首页' },
   'nav.lessons': { en: 'Lessons', zh: '课程' },
   'nav.dashboard': { en: 'Progress', zh: '进度' },
@@ -14,7 +12,6 @@ const translations: Record<string, Record<Lang, string>> = {
   'btn.prev': { en: 'Back', zh: '上一步' },
   'btn.start': { en: 'Start Lesson 1 — 10 min', zh: '开始第一课——10分钟' },
   'btn.continue': { en: 'Continue Learning', zh: '继续学习' },
-  'btn.signIn': { en: 'Sign In', zh: '登录' },
   'btn.copied': { en: 'Copied!', zh: '已复制！' },
   'btn.copy': { en: 'Copy', zh: '复制' },
   'hero.title.1': { en: 'From Zero to Shipping', zh: '从零到上线' },
@@ -30,7 +27,8 @@ const translations: Record<string, Record<Lang, string>> = {
   'feature.portfolio.desc': { en: 'Finish with a deployed app you can show employers.', zh: '课程结束时你会有一个可以给雇主看的在线应用。' },
   'week1': { en: 'Week 1: "I Can Do This"', zh: '第一周："我可以的"' },
   'week2': { en: 'Week 2: "I Build Things"', zh: '第二周："我会做东西了"' },
-  'free': { en: '~8 min', zh: '约8分钟' },
+  'summary.lessons': { en: 'lessons', zh: '课时' },
+  'summary.hours': { en: 'hours', zh: '小时' },
   'completed': { en: 'Completed', zh: '已完成' },
   'step': { en: 'Step', zh: '第' },
   'of': { en: 'of', zh: '步，共' },
@@ -46,7 +44,6 @@ const translations: Record<string, Record<Lang, string>> = {
   'dashboard.streak': { en: 'Day Streak', zh: '天连续' },
   'dashboard.percentage': { en: 'Complete', zh: '完成' },
   'dashboard.empty': { en: "No lessons completed yet. Start your first one!", zh: '还没有完成任何课程。开始第一课吧！' },
-  'error.network': { en: 'Network error. Please check your connection.', zh: '网络错误，请检查你的连接。' },
   'error.generic': { en: "Couldn't load this lesson. Check your connection and try again.", zh: '无法加载课程。检查网络后重试。' },
   'celebration.lessonComplete': { en: 'Lesson Complete!', zh: '课程完成！' },
   'celebration.next': { en: 'Next Lesson', zh: '下一课' },

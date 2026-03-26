@@ -1,6 +1,6 @@
 import { t, getLang, toggleLang, type Lang } from './i18n';
 import { renderLesson, unmountLesson } from './lessons';
-import { renderDashboard } from './progress';
+import { renderDashboard, getNextLesson } from './progress';
 import { initAuth } from './auth';
 import { triggerConfetti, showCelebration } from './celebrations';
 
@@ -165,8 +165,8 @@ function renderHome(): string {
           ${t('btn.start')} →
         </button>
         <div class="hero__summary">
-          <span class="hero__summary-item"><strong>14</strong> ${getLang() === 'zh' ? '课时' : 'lessons'}</span>
-          <span class="hero__summary-item"><strong>~2</strong> ${getLang() === 'zh' ? '小时' : 'hours'}</span>
+          <span class="hero__summary-item"><strong>14</strong> ${t('summary.lessons')}</span>
+          <span class="hero__summary-item"><strong>~2</strong> ${t('summary.hours')}</span>
         </div>
       </section>
       <section class="features">
@@ -195,12 +195,7 @@ function renderFeatureCard(key: string): string {
 function renderLessonList(): string {
   const progress = window.__getProgress();
   const completedLessons = new Set(progress.map((p: any) => p.lessonId));
-
-  let nextLesson = 1;
-  for (let i = 1; i <= 14; i++) {
-    if (!completedLessons.has(i)) { nextLesson = i; break; }
-    if (i === 14) nextLesson = 15; // all done
-  }
+  const nextLesson = getNextLesson();
 
   function renderCard(num: number): string {
     const completed = completedLessons.has(num);
@@ -216,7 +211,7 @@ function renderLessonList(): string {
     const meta = completed
       ? `<span class="lesson-card__badge">${t('completed')}</span>`
       : isCurrent
-        ? `<span class="lesson-card__badge lesson-card__badge--free">${getLang() === 'zh' ? '继续学习' : 'Continue'}</span>`
+        ? `<span class="lesson-card__badge lesson-card__badge--free">${t('btn.continue')}</span>`
         : '';
 
     return `

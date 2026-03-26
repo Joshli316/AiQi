@@ -84,10 +84,6 @@ async function handleCredentialResponse(response: any): Promise<void> {
   }
 }
 
-export function getUser(): User | null {
-  return currentUser;
-}
-
 export function getToken(): string | null {
   return currentUser?.token || null;
 }
@@ -101,22 +97,6 @@ export function signOut(): void {
   window.dispatchEvent(new CustomEvent('authchange'));
 }
 
-export function renderAuthButton(): string {
-  if (currentUser) {
-    return `
-      <button class="auth-btn" onclick="window.__signOut()">
-        <img class="auth-btn__avatar" src="${currentUser.picture}" alt="" referrerpolicy="no-referrer" />
-        <span>${currentUser.name.split(' ')[0]}</span>
-      </button>
-    `;
-  }
-
-  return `
-    <button class="auth-btn" id="google-signin-btn" onclick="window.__signIn()">
-      ${t('btn.signIn')}
-    </button>
-  `;
-}
 
 // Expose globally
 declare global {

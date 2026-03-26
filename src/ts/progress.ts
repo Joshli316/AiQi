@@ -12,15 +12,20 @@ const STORAGE_KEY = 'aiqi-progress';
 const STREAK_KEY = 'aiqi-streak-dates';
 const MS_PER_DAY = 86400000;
 
+let cachedProgress: ProgressEntry[] | null = null;
+
 function getLocalProgress(): ProgressEntry[] {
+  if (cachedProgress) return cachedProgress;
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    cachedProgress = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    return cachedProgress!;
   } catch {
     return [];
   }
 }
 
 function saveLocalProgress(entries: ProgressEntry[]): void {
+  cachedProgress = entries;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
 
