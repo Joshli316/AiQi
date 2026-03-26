@@ -38,7 +38,7 @@ export function renderTerminal(container: HTMLElement, exercise: TerminalExercis
       <div class="terminal__output" id="terminal-output"></div>
       <div class="terminal__input-line" id="terminal-input-line">
         <span class="terminal__prompt">$</span>
-        <input class="terminal__input" id="terminal-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${getLang() === 'zh' ? '在这里输入命令...' : 'Type a command here...'}" />
+        <input class="terminal__input" id="terminal-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="${getLang() === 'zh' ? '在这里输入命令...' : 'Type a command here...'}" />
       </div>
     </div>
   `;

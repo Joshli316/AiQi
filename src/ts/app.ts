@@ -100,7 +100,7 @@ function renderHeader(): string {
     <header class="header">
       <div class="header__logo">AI起 <span>AiQi</span></div>
       <div class="header__actions">
-        <button class="lang-toggle" onclick="window.__toggleLang()">
+        <button class="lang-toggle" onclick="window.__toggleLang()" aria-label="Switch language">
           <span class="lang-toggle__option ${getLang() === 'en' ? 'lang-toggle__option--active' : ''}">EN</span>
           <span class="lang-toggle__option ${getLang() === 'zh' ? 'lang-toggle__option--active' : ''}">中文</span>
         </button>
@@ -118,7 +118,7 @@ function renderBottomNav(): string {
   ];
 
   return `
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Main navigation">
       ${items.map(item => `
         <button class="nav-item ${currentRoute === item.route ? 'nav-item--active' : ''}"
                 onclick="window.__navigate('${item.route}')">
@@ -142,6 +142,7 @@ function renderHome(): string {
         <button class="hero__cta" onclick="window.__navigate('lesson', {lessonId: 1})">
           ${t('btn.start')} →
         </button>
+        <p style="margin-top: var(--space-md); font-size: var(--text-sm); color: var(--text-muted);">${t('hero.proof')}</p>
       </section>
       <section class="features">
         ${renderFeatureCard('terminal', '💻')}

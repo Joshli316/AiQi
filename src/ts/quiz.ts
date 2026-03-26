@@ -29,7 +29,7 @@ export function renderQuiz(container: HTMLElement, questions: QuizQuestion[], on
             </button>
           `).join('')}
         </div>
-        <div id="quiz-feedback"></div>
+        <div id="quiz-feedback" role="status" aria-live="polite"></div>
       </div>
     `;
 

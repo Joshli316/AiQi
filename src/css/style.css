@@ -446,9 +446,18 @@ ul, ol { list-style: none; }
   border: none;
   cursor: pointer;
   color: var(--text-secondary);
-  padding: var(--space-xs);
+  padding: var(--space-sm);
   display: flex;
   align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.lesson-header__back:hover {
+  background: var(--border-light);
 }
 
 .lesson-header__title {
@@ -947,6 +956,13 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+.paywall__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.3);
 }
 
 /* ===== Confetti ===== */
@@ -1036,6 +1052,12 @@ ul, ol { list-style: none; }
   border-radius: var(--radius-full);
   font-weight: 600;
   cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.celebration__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
 }
 
 /* ===== Loading / Skeleton ===== */

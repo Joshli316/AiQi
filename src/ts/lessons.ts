@@ -73,7 +73,7 @@ export async function renderLesson(container: HTMLElement, lessonId: number): Pr
   // Show loading skeleton
   container.innerHTML = `
     <div class="lesson-header">
-      <button class="lesson-header__back" onclick="window.__navigate('lessons')">
+      <button class="lesson-header__back" onclick="window.__navigate('lessons')" aria-label="Back to lessons">
         ${BACK_ARROW_SVG}
       </button>
       <span class="lesson-header__title">
@@ -95,7 +95,7 @@ export async function renderLesson(container: HTMLElement, lessonId: number): Pr
   } catch (err) {
     container.innerHTML = `
       <div class="lesson-header">
-        <button class="lesson-header__back" onclick="window.__navigate('lessons')">
+        <button class="lesson-header__back" onclick="window.__navigate('lessons')" aria-label="Back to lessons">
           ${BACK_ARROW_SVG}
         </button>
         <span class="lesson-header__title">${getLessonTitle(lessonId)}</span>
@@ -124,12 +124,12 @@ function renderCurrentStep(): void {
 
   appContainer.innerHTML = `
     <div class="lesson-header">
-      <button class="lesson-header__back" onclick="window.__navigate('lessons')">
+      <button class="lesson-header__back" onclick="window.__navigate('lessons')" aria-label="Back to lessons">
         ${BACK_ARROW_SVG}
       </button>
       <span class="lesson-header__title">${getLessonTitle(lessonData.id)}</span>
     </div>
-    <div class="progress-bar">
+    <div class="progress-bar" role="progressbar" aria-valuenow="${Math.round(progress)}" aria-valuemin="0" aria-valuemax="100">
       <div class="progress-bar__fill" style="width:${progress}%"></div>
     </div>
     <div class="step-counter">${stepCounterText}</div>
