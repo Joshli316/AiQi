@@ -25,8 +25,7 @@ AiQi/
 │   │   ├── auth.ts          # Google sign-in client
 │   │   ├── progress.ts      # Progress tracking + dashboard
 │   │   ├── lessons.ts       # Lesson renderer + exercise engine
-│   │   ├── quiz.ts          # Checkpoint quizzes
-│   │   └── paywall.ts       # Freemium gate (lessons 6+ require purchase)
+│   │   └── quiz.ts          # Checkpoint quizzes
 │   └── content/
 │       ├── en/              # English lesson files (lesson-01.json … lesson-14.json)
 │       └── zh/              # Chinese lesson files (lesson-01.json … lesson-14.json)
@@ -65,12 +64,11 @@ wrangler pages deploy dist/
 - **Content format**: Lessons are JSON files with ordered steps. Each step has: type (text, terminal-exercise, quiz, copy-block), content in both languages, and optional metadata.
 - **Terminal simulator**: Client-side only. Pre-scripted command/response pairs per lesson. No real shell execution.
 - **Tone**: Encouraging friend, not professor. No jargon without inline explanation. Celebrate mistakes as learning.
-- **Free lessons**: 1-5 are fully free, no account needed. Lessons 6-14 require one-time purchase.
+- **All lessons free**: Paywall removed. All 14 lessons are free, no account needed. Auth scaffolding exists but is not active.
 - **Progress data model**: `{ userId, lessonId, completedAt, exercisePassed }` — nothing more.
 
-## Current Task: UI/UX Redesign
-- **Plan file**: `plan-redesign.md` — 11 steps, visual + layout redesign only
-- **Design direction**: Codecademy-inspired — deep navy, vibrant accents, bold typography, generous whitespace
-- **Scope**: CSS overhaul + HTML template updates in TS render functions. NO changes to core logic, routing, i18n, auth, content, or API.
-- **Skill**: Use `/ui-ux-pro-max` to generate the design system (Step 1 of the plan)
-- **Key constraint**: Must look great on mobile (375px+), bilingual text (ZH is wider than EN — check overflow)
+## Design System
+- **Theme**: Dark OLED (Codecademy-inspired) — deep navy `#020617`, indigo accents, green CTA
+- **Design tokens**: `design-system/aiqi/MASTER.md`
+- **Typography**: Plus Jakarta Sans (headings/body) + JetBrains Mono (code) + Noto Sans SC (CJK)
+- **Icons**: Inline SVGs, Lucide-style, `stroke-width="2"`. No emojis as icons.
