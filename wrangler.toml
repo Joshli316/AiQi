@@ -5,5 +5,5 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "aiqi-db"
-database_id = "placeholder-replace-after-creation"
+database_id = "a20084c9-acff-4eb4-9b7d-13a0447b1f2d"
 migrations_dir = "migrations"
