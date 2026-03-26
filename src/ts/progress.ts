@@ -11,6 +11,7 @@ interface ProgressEntry {
 const STORAGE_KEY = 'aiqi-progress';
 const STREAK_KEY = 'aiqi-streak-dates';
 const PURCHASED_KEY = 'aiqi-purchased';
+const MS_PER_DAY = 86400000;
 
 function getLocalProgress(): ProgressEntry[] {
   try {
@@ -86,7 +87,7 @@ export function getStreak(): number {
   // Sort dates descending
   const sorted = streakDates.sort().reverse();
   const today = new Date().toISOString().split('T')[0];
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - MS_PER_DAY).toISOString().split('T')[0];
 
   // Streak must include today or yesterday
   if (sorted[0] !== today && sorted[0] !== yesterday) return 0;
@@ -95,7 +96,7 @@ export function getStreak(): number {
   for (let i = 0; i < sorted.length - 1; i++) {
     const curr = new Date(sorted[i]).getTime();
     const prev = new Date(sorted[i + 1]).getTime();
-    if (curr - prev === 86400000) {
+    if (curr - prev === MS_PER_DAY) {
       streak++;
     } else {
       break;

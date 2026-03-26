@@ -2,8 +2,10 @@ import { t, getLang, type Lang } from './i18n';
 import { getLessonTitle, navigate } from './app';
 import { renderTerminal, unmountTerminal } from './terminal';
 import { renderQuiz } from './quiz';
-import { markComplete, isLessonComplete } from './progress';
+import { markComplete } from './progress';
 import { triggerConfetti, showCelebration } from './celebrations';
+
+const BACK_ARROW_SVG = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>';
 
 interface LessonStep {
   type: 'text' | 'terminal-exercise' | 'quiz' | 'copy-block';
@@ -72,7 +74,7 @@ export async function renderLesson(container: HTMLElement, lessonId: number): Pr
   container.innerHTML = `
     <div class="lesson-header">
       <button class="lesson-header__back" onclick="window.__navigate('lessons')">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        ${BACK_ARROW_SVG}
       </button>
       <span class="lesson-header__title">
         <span class="skeleton skeleton-text" style="width:60%;display:inline-block;height:18px"></span>
@@ -94,7 +96,7 @@ export async function renderLesson(container: HTMLElement, lessonId: number): Pr
     container.innerHTML = `
       <div class="lesson-header">
         <button class="lesson-header__back" onclick="window.__navigate('lessons')">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          ${BACK_ARROW_SVG}
         </button>
         <span class="lesson-header__title">${getLessonTitle(lessonId)}</span>
       </div>
@@ -123,7 +125,7 @@ function renderCurrentStep(): void {
   appContainer.innerHTML = `
     <div class="lesson-header">
       <button class="lesson-header__back" onclick="window.__navigate('lessons')">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        ${BACK_ARROW_SVG}
       </button>
       <span class="lesson-header__title">${getLessonTitle(lessonData.id)}</span>
     </div>
@@ -179,7 +181,6 @@ function formatBody(html: string): string {
 
 function renderCodeBlock(code: string, label?: string): string {
   const id = 'code-' + Math.random().toString(36).slice(2);
-  // Store code in a data attribute for the copy function
   const escapedCode = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
   setTimeout(() => {

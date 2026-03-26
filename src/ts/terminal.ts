@@ -84,9 +84,6 @@ function handleCommand(cmd: string): void {
       }
     });
   } else {
-    // Wrong command — show hint
-    const lang = getLang();
-    const hint = activeExercise.hints[lang] || activeExercise.hints['en'];
     addOutputLine(`${t('terminal.hint.almost')}${t('terminal.hint.prefix')}${expected.command}`, 'hint');
   }
 }

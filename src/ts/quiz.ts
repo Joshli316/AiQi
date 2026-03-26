@@ -9,7 +9,6 @@ interface QuizQuestion {
 
 export function renderQuiz(container: HTMLElement, questions: QuizQuestion[], onComplete: () => void): void {
   let currentQuestion = 0;
-  let answeredCorrectly = new Set<number>();
 
   function renderQuestion(): void {
     const q = questions[currentQuestion];
@@ -55,7 +54,6 @@ export function renderQuiz(container: HTMLElement, questions: QuizQuestion[], on
 
     if (selectedIndex === q.correctIndex) {
       btnEl.classList.add('quiz__option--correct');
-      answeredCorrectly.add(currentQuestion);
       feedbackEl.innerHTML = `
         <div class="quiz__feedback quiz__feedback--correct">
           <strong>${t('quiz.correct')}</strong> ${q.explanation[lang]}

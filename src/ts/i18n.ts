@@ -4,7 +4,7 @@ const STORAGE_KEY = 'aiqi-lang';
 
 let currentLang: Lang = (localStorage.getItem(STORAGE_KEY) as Lang) || 'zh';
 
-const chrome: Record<string, Record<Lang, string>> = {
+const translations: Record<string, Record<Lang, string>> = {
   'app.title': { en: 'AiQi', zh: 'AI起' },
   'app.subtitle': { en: 'AI起', zh: 'AiQi' },
   'nav.home': { en: 'Home', zh: '首页' },
@@ -68,7 +68,7 @@ const chrome: Record<string, Record<Lang, string>> = {
 };
 
 export function t(key: string): string {
-  const entry = chrome[key];
+  const entry = translations[key];
   if (!entry) return key;
   return entry[currentLang] || entry['en'] || key;
 }
