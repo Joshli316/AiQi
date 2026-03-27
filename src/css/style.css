@@ -1314,11 +1314,48 @@ a:focus:not(:focus-visible) {
   }
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive — Tablet (iPad Mini, iPad) ===== */
 @media (min-width: 768px) {
-  #app { max-width: 520px; }
+  #app { max-width: 640px; }
 
+  .hero { padding: var(--space-3xl) var(--space-lg) var(--space-2xl); }
   .hero__title { font-size: var(--text-4xl); }
+  .hero__subtitle { font-size: var(--text-xl); }
+  .hero-terminal { max-width: 440px; }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    padding: 0 var(--space-lg) var(--space-2xl);
+  }
+
+  .main-content { padding: var(--space-lg); padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+
+  .lesson-card { padding: var(--space-lg); }
+  .lesson-card__title { white-space: normal; }
+
+  .lesson-step { padding: var(--space-xl) var(--space-lg); }
+  .lesson-step__title { font-size: var(--text-3xl); }
+  .lesson-step__body { font-size: var(--text-lg); }
 
   .dashboard__stats { gap: var(--space-md); }
+
+  .bottom-nav { max-width: 640px; }
+  .next-btn { max-width: 608px; }
+}
+
+/* ===== Responsive — Large Tablet (iPad Pro, landscape) ===== */
+@media (min-width: 1024px) {
+  #app { max-width: 720px; }
+
+  .hero__title { font-size: 2.75rem; }
+  .hero-terminal { max-width: 500px; }
+
+  .hero__summary { gap: var(--space-xl); }
+
+  .lesson-list::before { left: 40px; }
+
+  .bottom-nav { max-width: 720px; }
+  .next-btn { max-width: 688px; }
 }
