@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🚀</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#0F172A"/>
+  <path d="M14 18L26 32L14 46" stroke="#6366F1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="31" y="24" width="3" height="16" rx="1.5" fill="#22C55E"/>
+  <text x="37" y="42" font-family="sans-serif" font-size="24" font-weight="700" fill="#F8FAFC">Q</text>
+</svg>
