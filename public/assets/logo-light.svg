@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- Terminal prompt bracket -->
+  <path d="M8 20L22 40L8 60" stroke="#6366F1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Cursor bar -->
+  <rect x="28" y="28" width="3" height="24" rx="1.5" fill="#22C55E"/>
+
+  <!-- AiQi wordmark -->
+  <text x="44" y="52" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="40" font-weight="700" fill="#0F172A" letter-spacing="-1">AiQi</text>
+
+  <!-- AI起 subtitle -->
+  <text x="182" y="52" font-family="Noto Sans SC, -apple-system, sans-serif" font-size="18" font-weight="500" fill="#64748B">AI起</text>
+</svg>

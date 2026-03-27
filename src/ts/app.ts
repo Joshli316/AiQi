@@ -110,7 +110,7 @@ function parseHash(): { route: Route; params: RouteParams } {
 function renderHeader(): string {
   return `
     <header class="header">
-      <div class="header__logo">AI起 <span>AiQi</span></div>
+      <div class="header__logo"><img src="/assets/logo-dark.svg" alt="AiQi" style="height:28px"></div>
       <div class="header__actions">
         <button class="lang-toggle" onclick="window.__toggleLang()" aria-label="Switch language">
           <span class="lang-toggle__option ${getLang() === 'en' ? 'lang-toggle__option--active' : ''}">EN</span>
